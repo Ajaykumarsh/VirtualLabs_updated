@@ -19,12 +19,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // app.use(express.static(path.join(__dirname, 'public/js')));
 
 
-app.get("/", (req, res) => {
-  
-    res.sendFile(path.join(__dirname, 'views', 'home.html'));
-    
 
-});
 // Register Shit
 app.use(session({
     secret:'secretekey',
@@ -59,7 +54,15 @@ const checkUser=(req,res,next)=>{
 //     }
     
 // }
+app.get('/',(req,res)=>{
+    res.redirect('/home');
+})
+app.get('/home', (req, res) => {
+  
+    res.sendFile(path.join(__dirname, 'views', 'home.html'));
+    
 
+});
 app.get("/titles", checkUser, (req, res) => {
     
     res.sendFile(path.join(__dirname, 'views', 'titles.html'));
