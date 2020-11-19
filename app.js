@@ -2,13 +2,13 @@ const express = require("express");
 const app = express();
 const session=require('express-session')
 // const {c, cpp, node, python, java} = require('compile-run');
-const studentRouter=require('./Routes/StudentAuth')  
-const quiz_solution=require('./Routes/quiz_solution') 
+const studentRouter=require('./Routes/StudentAuth.js')  
+const quiz_solution=require('./Routes/quiz_solution.js') 
 const path = require('path');
 // const quiz=require('./public/js/cnquiz');
 
 const compile = require('./public/js/compile.js');
-const quizquestions =require('./public/js/questions')
+// const quizquestions =require('./public/js/questions')
 const bodyParser = require('body-parser');
 
 
