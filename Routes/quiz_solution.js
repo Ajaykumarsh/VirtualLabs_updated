@@ -9,7 +9,7 @@ const quiz = require('../public/js/cnquiz');
 // mongoose.connect(url, { useNewUrlParser: true });
 // const con = mongoose.connection
 // con.on('open', function () { console.log("mogoDB connection established with quiz") })
-const Quiz = require('../public/model/QuizDb')//DB Schema
+
 const performance = require('../public/model/studentResultsDB')
 
 

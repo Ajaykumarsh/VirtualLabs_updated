@@ -2,8 +2,8 @@ const express = require("express");
 const app = express();
 const session=require('express-session')
 // const {c, cpp, node, python, java} = require('compile-run');
-const studentRouter=require('./Routes/StudentAuth.js')  
-const quiz_solution=require('./Routes/quiz_solution.js') 
+const studentRouter=require('./Routes/StudentAuth')  
+const quiz_solution=require('./Routes/quiz_solution') 
 const path = require('path');
 // const quiz=require('./public/js/cnquiz');
 
@@ -127,13 +127,13 @@ app.get("/networkutilities",checkUser,(req, res) => {
 
 
 // var PORT=process.env.PORT ||3000;
-// app.listen(PORT, err => {
-//     if (err) console.log("OOPS!!server failed")
-//     else console.log("server started at port : 3000");
-// }); 
-// app.listen(process.env.PORT || '3000', function(){
+app.listen(3000, err => {
+    if (err) console.log("OOPS!!server failed")
+    else console.log("server started at port : 3000");
+}); 
+// app.listen( '3000', function(){
 //     console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 //   });
-   var PORT=process.env.PORT || '8080';
+//    var PORT=process.env.PORT || '8080';
 
-app.set("port",PORT);
+// app.set("port",PORT);
