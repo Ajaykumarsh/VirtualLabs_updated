@@ -1,6 +1,9 @@
 {
   "name": "virtuallabs",
   "version": "1.0.0",
+  "engines": {
+    "node": "12.x"
+  },
   "description": "",
   "main": "app.js",
   "dependencies": {
@@ -12,7 +15,7 @@
     "express": "^4.17.1",
     "express-session": "^1.17.1",
     "mongoose": "^5.10.14",
-    "node": "^15.2.1",
+    
     "path": "^0.12.7"
   },
   "devDependencies": {
