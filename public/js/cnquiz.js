@@ -12,7 +12,7 @@ module.exports= class Quiz_solve{
  
 
   async  fun(res){
- MongoClient.connect(process.env.MONGODB_URI||'mongodb://localhost/Studentdbex', function(err, db) {
+ MongoClient.connect(process.env.MONGODB_URI||'mongodb://localhost/Studentdbex',{ useNewUrlParser: true, useUnifiedTopology: true }, function(err, db) {
             if (err) throw err;
             var dbo = db.db("Studentdbex");// DB name(Studentdbex)
            //get the contents from Quiz collection 
