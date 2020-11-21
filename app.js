@@ -16,7 +16,7 @@ app.set("View engine", "ejs");
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
-// app.use(express.static(path.join(__dirname, 'public/js')));
+
 
 
 
@@ -58,15 +58,10 @@ app.get('/',(req,res)=>{
     res.redirect('/home');
 })
 app.get('/home', (req, res) => {
-  
     res.sendFile(path.join(__dirname, 'views', 'home.html'));
-    
-
 });
 app.get("/titles", checkUser, (req, res) => {
-    
     res.sendFile(path.join(__dirname, 'views', 'titles.html'));
-    // res.sendFile(path.join(__dirname, 'public/js', 'questions.js'))
     
 });
 app.get("/datastructures", checkUser,(req, res) => {
@@ -118,11 +113,6 @@ app.get("/cn",checkUser, (req, res) => {
 app.get("/networkutilities",checkUser,(req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'networkutilities.html'));
 });
-// app.get("/logout",(req,res)=>{
-    
-// })
-
-
 
 
 
