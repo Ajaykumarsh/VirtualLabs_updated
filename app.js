@@ -21,16 +21,16 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 // Register Shit
-app.use(session({
-    secret:'secretekey',
-    resave:false,
-    saveUninitialized:false,
-    name:"StudentUSN",
-    cookie:{
-        maxAge:1000*60*60,
-        sameSite:true,
-    }
-}))
+// app.use(session({
+//     secret:'secretekey',
+//     resave:false,
+//     saveUninitialized:false,
+//     name:"StudentUSN",
+//     cookie:{
+//         maxAge:1000*60*60,
+//         sameSite:true,
+//     }
+// }))
 
 app.use('/StudentAuthentication',studentRouter);
 app.use('/quiz',quiz_solution);
@@ -127,13 +127,13 @@ app.get("/networkutilities",checkUser,(req, res) => {
 
 
 // var PORT=process.env.PORT ||3000;
-app.listen( process.env.PORT || '3000', err => {
-    if (err) console.log("OOPS!!server failed")
-    else console.log("server started at port : 3000");
-}); 
+// app.listen( process.env.PORT || '3000', err => {
+//     if (err) console.log("OOPS!!server failed")
+//     else console.log("server started at port : 3000");
+// }); 
 // app.listen( '3000', function(){
 //     console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 //   });
-//    var PORT=process.env.PORT || '8080';
+   var PORT=process.env.PORT || '8080';
 
-// app.set("port",PORT);
+app.set("port",PORT);
