@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
 
 var MongoClient = require('mongodb').MongoClient;
-var url = "mongodb://localhost:27017/";
+// var url = "mongodb://localhost:27017/";
 const bodyParser = require('body-parser');
 app.set("View engine","ejs");
 
@@ -12,7 +12,7 @@ module.exports= class Quiz_solve{
  
 
   async  fun(res){
- MongoClient.connect(url, function(err, db) {
+ MongoClient.connect('process.env.MONGODB_URI'||'mongodb://localhost/Studentdbex', function(err, db) {
             if (err) throw err;
             var dbo = db.db("Studentdbex");// DB name(Studentdbex)
            //get the contents from Quiz collection 

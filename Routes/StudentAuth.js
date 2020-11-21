@@ -5,8 +5,8 @@ const bcrypt=require('bcrypt')//encrypting the password
 
 //mongoDB connection
 const mongoose = require('mongoose');
-const url = 'mongodb://localhost/Studentdbex'
-mongoose.connect(url, { useNewUrlParser: true });
+// const url = 'process.env.MONGODB_URI'||'mongodb://localhost/Studentdbex'
+mongoose.connect('process.env.MONGODB_URI'||'mongodb://localhost/Studentdbex', { useNewUrlParser: true });
 const con = mongoose.connection
 con.on('open', function () { console.log("mogoDB connection established  successfully..!") })
 const students = require('../public/model/StudentDB')//DB Schema
