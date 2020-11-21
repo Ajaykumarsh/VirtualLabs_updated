@@ -21,16 +21,16 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 // Register Shit
-// app.use(session({
-//     secret:'secretekey',
-//     resave:false,
-//     saveUninitialized:false,
-//     name:"StudentUSN",
-//     cookie:{
-//         maxAge:1000*60*60,
-//         sameSite:true,
-//     }
-// }))
+app.use(session({
+    secret:'secretekey',
+    resave:false,
+    saveUninitialized:false,
+    name:"StudentUSN",
+    cookie:{
+        maxAge:1000*60*60,
+        sameSite:true,
+    }
+}))
 
 app.use('/StudentAuthentication',studentRouter);
 app.use('/quiz',quiz_solution);
