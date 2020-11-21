@@ -33,7 +33,7 @@ const QuizSubmitorNot=(req,res,next)=>{
   // console.log(req.session.quiz);
   // next();
   // var id=req.session.usn;
-  MongoClient.connect(process.env.MONGODB_URI||'mongodb://localhost:27017/Studentdbex',{ useNewUrlParser: true, useUnifiedTopology: true },async(err,db)=>{
+  MongoClient.connect(process.env.MONGO_URI||'mongodb://localhost:27017/Studentdbex',{ useNewUrlParser: true, useUnifiedTopology: true },async(err,db)=>{
     if(err) throw err;
     var dbper =db.db("Studentdbex");
 dbper.collection("performances").findOne({},async(err,result)=>{
@@ -79,7 +79,7 @@ router.post("/osi", urlencodedParser,  (req, res) => {
   //this well fetch the test results of the quiz
   var answers = req.body;
   //   console.log(req.body["OSI stands for"]);
-  MongoClient.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/Studentdbex', { useNewUrlParser: true, useUnifiedTopology: true }, async (err, db)=> {
+  MongoClient.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/Studentdbex', { useNewUrlParser: true, useUnifiedTopology: true }, async (err, db)=> {
  
     if (err) throw err;
     var dbo = db.db("Studentdbex");// DB name(Studentdbex)
