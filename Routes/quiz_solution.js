@@ -79,7 +79,7 @@ router.post("/osi", urlencodedParser,  (req, res) => {
   //this well fetch the test results of the quiz
   var answers = req.body;
   //   console.log(req.body["OSI stands for"]);
-  MongoClient.connect(process.env.MONGODB_URI || 'mongodb://localhost/Studentdbex', { useNewUrlParser: true, useUnifiedTopology: true }, async (err, db)=> {
+  MongoClient.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/Studentdbex', { useNewUrlParser: true, useUnifiedTopology: true }, async (err, db)=> {
  
     if (err) throw err;
     var dbo = db.db("Studentdbex");// DB name(Studentdbex)
