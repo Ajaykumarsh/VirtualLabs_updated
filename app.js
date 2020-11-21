@@ -116,14 +116,14 @@ app.get("/networkutilities",checkUser,(req, res) => {
 
 
 
-// var PORT=process.env.PORT ||3000;
+var PORT=process.env.PORT ||3000;
 // app.listen( process.env.PORT || '3000', err => {
 //     if (err) console.log("OOPS!!server failed")
 //     else console.log("server started at port : 3000");
 // }); 
-// app.listen( '3000', function(){
-//     console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
-//   });
-   var PORT=process.env.PORT || '8080';
+app.listen( PORT , function(){
+    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+  });
+//    var PORT=process.env.PORT || '8080';
 
-app.set("port",PORT);
+// app.set("port",PORT);
