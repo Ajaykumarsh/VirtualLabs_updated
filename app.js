@@ -127,7 +127,7 @@ app.get("/networkutilities",checkUser,(req, res) => {
 
 
 // var PORT=process.env.PORT ||3000;
-app.listen(3000, err => {
+app.listen( process.env.PORT || '3000', err => {
     if (err) console.log("OOPS!!server failed")
     else console.log("server started at port : 3000");
 }); 
