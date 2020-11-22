@@ -92,7 +92,7 @@ window.alert("You have already taken this test");
 
 
 const result=await dbper.collection("performance").find({_id:req.session.usn}).toArray(function(err, result) {
-res.send(`${result}`)
+res.send(`${result.sub}`)
 
 })
     });
