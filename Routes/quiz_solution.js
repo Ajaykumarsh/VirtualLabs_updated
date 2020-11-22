@@ -65,9 +65,34 @@ window.alert("You have already taken this test");
 //get the quiz questions from the db and print in osi.ejs
 router.get("/osi",QuizSubmitorNot, checkUser, (req, res) => {
   // new quiz();
-  let q = new quiz();
+  //let q = new quiz();
+  //q.fun(res);
 
-  q.fun(res);
+
+  MongoClient.connect(process.env.MONGO_URI||'mongodb://localhost:27017/Studentdbex',{ useNewUrlParser: true, useUnifiedTopology: true }, (err, db)=>{
+            if (err) {console.log("con"); throw err};
+            
+            
+            var dbo = db.db("Studentdbex");// DB name(Studentdbex)
+           //get the contents from Quiz collection 
+            dbo.collection("Quiz").findOne({}, function(err, result) {
+              if (err) throw err;
+                else{
+                    // console.log(result);
+                     
+                    res.render("osi.ejs",{result:result});
+
+
+                    
+                   
+                }
+               
+            
+              db.close();
+              
+            });
+
+
 
 });
 
