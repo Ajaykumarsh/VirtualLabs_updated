@@ -1,9 +1,10 @@
 const express = require('express');
 
-// const mongoose = require('mongoose');
+ const mongoose = require('mongoose');
 const studentRouter = require('./StudentAuth');
 // const url = 'mongodb://localhost/Studentdbex'
 var MongoClient = require('mongodb').MongoClient;
+
 // var url = 'process.env.MONGODB_URI'||'mongodb://localhost/Studentdbex'
 const quiz = require('../public/js/cnquiz');
 // mongoose.connect(url, { useNewUrlParser: true });
@@ -89,12 +90,16 @@ window.alert("You have already taken this test");
 });
 
 */
-
-
-const result=await dbper.collection("performance").find({_id:req.session.usn}).toArray(function(err, result) {
-res.send(`${typeof(req.session.usn)}`)
-
+mongoose.connect( process.env.MONGO_URI ||'mongodb://localhost:27017/Studentdbex',{ useNewUrlParser: true, useUnifiedTopology: true });
+const con = mongoose.connection
+con.on('open',async()=>{
+  const result=await performance.findById(req.session.usn);
+  console.log(result.toString())
+  res.send(result);
+  
 })
+
+
     });
 }
 
