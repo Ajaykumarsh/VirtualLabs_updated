@@ -36,6 +36,7 @@ const QuizSubmitorNot=(req,res,next)=>{
   MongoClient.connect(process.env.MONGO_URI||'mongodb://localhost:27017/StudentDBex',{ useNewUrlParser: true, useUnifiedTopology: true },async(err,db)=>{
     if(err) throw err;
     var dbper =db.db("StudentDBex");
+    /*
 dbper.collection("performances").findOne({},async(err,result)=>{
   if(err) throw err;
   else {
@@ -58,7 +59,38 @@ window.alert("You have already taken this test");
   </html>`)
   }
 }
+});*/
+dbper.collection("performances").find({_id:ObjectId(req.session.usn)},async(err,result)=>{
+  if(err) throw err;
+  else {
+    // var id =result.id;
+    // console.log(result);
+  if(result==null||result._id==undefined){
+    next();
+  }else{
+    // res.send("<h>already Taken the</h>");
+  //  window.alert("You have already taken the test");
+  res.send(`<html>
+  <head>
+  <script>
+window.alert("You have already taken this test");
+  </script>
+  </head>
+  <body>
+  <a href="/cn" style="text-align: center;">back</a>
+  </body>
+  </html>`)
+  }
+}
 });
+
+
+
+
+
+
+
+
     });
 }
 

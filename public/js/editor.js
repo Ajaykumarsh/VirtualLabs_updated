@@ -51,7 +51,7 @@ executeCodeBtn.addEventListener('click', () => {
 var x = setInterval(function() {
 //    console.log("eksd");
 const sourcecode = codeEditor.getValue();
-if(sessionStorage.getItem('uCode')!=defaultCode||sessionStorage.getItem('uCode')==null){
+if(sessionStorage.getItem('uCode')!=defaultCode||sessionStorage.getItem('uCode')==undefined){
     sessionStorage.setItem('uCode',sourcecode);
 }
 // console.log(codeEditor.getValue);
