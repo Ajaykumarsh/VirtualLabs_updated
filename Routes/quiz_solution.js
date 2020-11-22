@@ -63,7 +63,7 @@ window.alert("You have already taken this test");
 
 
 
-
+/*
 dbper.collection("performance").find({_id:req.session.usn},async(err,result)=>{
   if(err) throw err;
   else {
@@ -88,11 +88,12 @@ window.alert("You have already taken this test");
 }
 });
 
+*/
 
 
-
-//dbper.collection("performances")
-
+const result=await dbper.collection("performance").findOne({_id:req.session.usn})
+console.log(req.session.usn);
+res.send(`${result}`)
 
 
     });
