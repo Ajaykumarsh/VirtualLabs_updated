@@ -60,11 +60,11 @@ window.alert("You have already taken this test");
   }
 }
 });*/
-dbper.collection("performances").find({},{projection:{_id:req.session.usn}},async(err,result)=>{
+dbper.collection("performances").find({_id:req.session.usn},async(err,result)=>{
   if(err) throw err;
   else {
     // var id =result.id;
-    // console.log(result);
+    console.log(result);
   if(result==null||result._id==undefined){
     next();
   }else{
