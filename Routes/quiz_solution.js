@@ -94,8 +94,21 @@ mongoose.connect( process.env.MONGO_URI ||'mongodb://localhost:27017/Studentdbex
 const con = mongoose.connection
 con.on('open',()=>{console.log("ololololo");})
 const result=await performance.findById(req.session.usn);
-console.log(result.sub)
-res.send(result);
+if(result==null||result==undefined){
+  next();
+}else{
+  res.send(`<html>
+  <head>
+  <script>
+window.alert("You have already taken this test");
+  </script>
+  </head>
+  <body>
+  <a href="/cn" style="text-align: center;">back</a>
+  </body>
+  </html>`)
+
+}
 
     });
 }
