@@ -60,7 +60,7 @@ window.alert("You have already taken this test");
   }
 }
 });*/
-dbper.collection("performances").find({},{projection:{_id:ObjectId(req.session.usn)}},async(err,result)=>{
+dbper.collection("performances").find({},{projection:{_id:req.session.usn}},async(err,result)=>{
   if(err) throw err;
   else {
     // var id =result.id;
