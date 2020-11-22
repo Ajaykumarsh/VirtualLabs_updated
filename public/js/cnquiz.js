@@ -20,7 +20,7 @@ module.exports= class Quiz_solve{
             
             var dbo = db.db("Studentdbex");// DB name(Studentdbex)
            //get the contents from Quiz collection 
-            await dbo.collection("Quiz").findOne({}, function(err, result) {
+            dbo.collection("Quiz").findOne({}, function(err, result) {
               if (err) throw err;
                 else{
                     // console.log(result);
