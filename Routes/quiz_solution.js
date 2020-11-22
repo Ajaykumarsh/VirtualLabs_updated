@@ -93,7 +93,7 @@ window.alert("You have already taken this test");
 
 const result=await dbper.collection("performance").findOne({_id:req.session.usn})
 console.log(req.session.usn);
-res.send(`${result}`)
+res.send(`${req.session.usn}`)
 
 
     });
