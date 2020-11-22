@@ -17,9 +17,12 @@ module.exports= class Quiz_solve{
      
     MongoClient.connect(process.env.MONGO_URI||'mongodb://localhost:27017/Studentdbex',{ useNewUrlParser: true, useUnifiedTopology: true }, async(err, db)=>{
             if (err) throw err;
-            //var dbo = db.db("Studentdbex");// DB name(Studentdbex)
+            console.log(db.collection("Quiz")+"ola")
+            /*
+            
+            var dbo = db.db("Studentdbex");// DB name(Studentdbex)
            //get the contents from Quiz collection 
-            await db.collection("Quiz").findOne({}, function(err, result) {
+            await dbo.collection("Quiz").findOne({}, function(err, result) {
               if (err) throw err;
                 else{
                     // console.log(result);
@@ -35,7 +38,7 @@ module.exports= class Quiz_solve{
               db.close();
               
             });
-            
+            */
           });
          
 
