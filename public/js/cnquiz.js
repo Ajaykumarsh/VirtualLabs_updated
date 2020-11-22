@@ -42,8 +42,7 @@ module.exports= class Quiz_solve{
           });
          
 
-        const con=mongoose.connect(process.env.MONGO_URI ||'mongodb://localhost:27017/Studentdbex',{ useNewUrlParser: true, useUnifiedTopology: true });
-
+        
         }
        
         
