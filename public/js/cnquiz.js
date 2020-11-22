@@ -2,8 +2,7 @@
 const express = require("express");
 const app = express();
 
-var MongoClient = require('mongoose')
-//var MongoClient = require('mongodb').MongoClient;
+var MongoClient = require('mongodb').MongoClient;
 // var url = "mongodb://localhost:27017/";
 const bodyParser = require('body-parser');
 app.set("View engine","ejs");
@@ -14,12 +13,7 @@ module.exports= class Quiz_solve{
 
   async  fun(res){
     
-    MongoClient.connect(process.env.MONGO_URI||"mongodb://localhost/Studentdbex");
-    const con=MongoClient.connection
-    const a=Object.keys(con.collection)
-    con.on('open',()=>{console.log("ola");});
-    res.send(`${a}`)
-    /* 
+   
     MongoClient.connect(process.env.MONGO_URI||'mongodb://localhost:27017/Studentdbex',{ useNewUrlParser: true, useUnifiedTopology: true }, (err, db)=>{
             if (err) {console.log("con"); throw err};
             
@@ -44,7 +38,7 @@ module.exports= class Quiz_solve{
             });
             
           });
-          */
+          
 
         
         }
