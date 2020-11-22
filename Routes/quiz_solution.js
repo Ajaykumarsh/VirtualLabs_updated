@@ -94,7 +94,7 @@ mongoose.connect( process.env.MONGO_URI ||'mongodb://localhost:27017/Studentdbex
 const con = mongoose.connection
 con.on('open',async()=>{
   const result=await performance.findById(req.session.usn);
-  console.log(result.toString())
+  console.log(result.sub)
   res.send(result);
   
 })
