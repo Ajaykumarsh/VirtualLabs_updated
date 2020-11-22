@@ -64,7 +64,7 @@ dbper.collection("performances").find({_id:req.session.usn},async(err,result)=>{
   if(err) throw err;
   else {
     // var id =result.id;
-    console.log(result);
+    console.log("hello"+result);
   if(result==null||result._id==undefined){
     next();
   }else{
