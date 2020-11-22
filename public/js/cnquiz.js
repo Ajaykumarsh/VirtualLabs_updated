@@ -16,8 +16,9 @@ module.exports= class Quiz_solve{
     
     MongoClient.connect(process.env.MONGO_URI||"mongodb://localhost/Studentdbex");
     const con=MongoClient.connection
+    const a=mongoose.connection.collection("Quiz")
     con.on('open',()=>{console.log("ola");});
-    res.send(`${con}`)
+    res.send(`${a}`)
     /* 
     MongoClient.connect(process.env.MONGO_URI||'mongodb://localhost:27017/Studentdbex',{ useNewUrlParser: true, useUnifiedTopology: true }, (err, db)=>{
             if (err) {console.log("con"); throw err};
