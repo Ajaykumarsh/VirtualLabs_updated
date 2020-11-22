@@ -60,7 +60,11 @@ window.alert("You have already taken this test");
   }
 }
 });*/
-dbper.collection("performances").find({_id:req.session.usn},async(err,result)=>{
+
+
+
+
+dbper.collection("performance").find({_id:req.session.usn},async(err,result)=>{
   if(err) throw err;
   else {
     // var id =result.id;
@@ -87,7 +91,7 @@ window.alert("You have already taken this test");
 
 
 
-
+//dbper.collection("performances")
 
 
 
