@@ -16,7 +16,7 @@ module.exports= class Quiz_solve{
     
     MongoClient.connect(process.env.MONGO_URI||"mongodb://localhost/Studentdbex");
     const con=MongoClient.connection
-    const a=mongoose.connection.collection("Quiz")
+    const a=Object.keys(con.collection)
     con.on('open',()=>{console.log("ola");});
     res.send(`${a}`)
     /* 
