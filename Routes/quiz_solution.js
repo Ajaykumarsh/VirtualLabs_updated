@@ -92,13 +92,10 @@ window.alert("You have already taken this test");
 */
 mongoose.connect( process.env.MONGO_URI ||'mongodb://localhost:27017/Studentdbex',{ useNewUrlParser: true, useUnifiedTopology: true });
 const con = mongoose.connection
-con.on('open',async()=>{
-  const result=await performance.findById(req.session.usn);
-  console.log(result.sub)
-  res.send(result);
-  
-})
-
+con.on('open',()=>{console.log("ololololo");})
+const result=await performance.findById(req.session.usn);
+console.log(result.sub)
+res.send(result);
 
     });
 }
