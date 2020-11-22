@@ -15,7 +15,7 @@ module.exports= class Quiz_solve{
   async  fun(res){
     
      
-    MongoClient.connect(process.env.MONGO_URI||'mongodb://localhost:27017/Studentdbex',{ useNewUrlParser: true, useUnifiedTopology: true }, async(err, db)=>{
+    MongoClient.connect(process.env.MONGO_URI||'mongodb://localhost:27017/Studentdbex',{ useNewUrlParser: true, useUnifiedTopology: true }, (err, db)=>{
             if (err) throw err;
             console.log(db.collection("Quiz")+"ola")
             /*
