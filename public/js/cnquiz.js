@@ -14,8 +14,10 @@ module.exports= class Quiz_solve{
 
   async  fun(res){
     
-    const con=MongoClient.connect(process.env.MONGO_URI||"mongodb://localhost/Studentdbex");
-    con.on('open',()=>{console.log("ola");})
+    MongoClient.connect(process.env.MONGO_URI||"mongodb://localhost/Studentdbex");
+    const con=MongoClient.connection
+    con.on('open',()=>{console.log("ola");});
+    res.send('<html><h1>ola</h1></html>')
     /* 
     MongoClient.connect(process.env.MONGO_URI||'mongodb://localhost:27017/Studentdbex',{ useNewUrlParser: true, useUnifiedTopology: true }, (err, db)=>{
             if (err) {console.log("con"); throw err};
