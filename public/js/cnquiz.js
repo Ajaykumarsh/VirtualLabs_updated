@@ -15,7 +15,7 @@ module.exports= class Quiz_solve{
 
   async  fun(res){
     
-    const con=mongoose.connect(process.env.MONGO_URI ||'mongodb://localhost:27017/Studentdbex',{ useNewUrlParser: true, useUnifiedTopology: true });
+    mongoose.connect(process.env.MONGO_URI ||'mongodb://localhost:27017/Studentdbex',{ useNewUrlParser: true, useUnifiedTopology: true });
     const result=await Quiz.findById('5fb9dfb81ebb4ead07fc9ff4');
     console.log(result);
     res.render("osi.ejs",{result:result});
