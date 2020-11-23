@@ -3,11 +3,10 @@
 
 function FormSubmit() {
     var usn = document.getElementById('usn');
-    // document.getElementById("user").innerHTML="1ds17cs008";
     usn.value=usn.value.toUpperCase();
     var err = document.getElementById('Invalid');
     var pass = document.getElementById('password');
-    var exp = /^1ds17cs[0-9]{3}$/i;
+    var exp = /^1ds1[6789]cs[0-9]{3}$/i;
     if (usn.value == "") {
         err.innerHTML = "USN cannot be Empty..!";
         err.style.visibility = 'visible';

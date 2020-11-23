@@ -1,6 +1,6 @@
 
 function CheckUsn(usn) {
-    const exp = /^1ds17cs[0-9]{3}$/i;
+    const exp = /^1ds1[6789]cs[0-9]{3}$/i;
     if (exp.test(usn.value)) {
         usn.value=usn.value.toUpperCase()
         sessionStorage.setItem("usn", usn.value)
