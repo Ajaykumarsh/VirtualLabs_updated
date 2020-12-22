@@ -3,14 +3,14 @@ const executeCodeBtn = document.querySelector('.editor__run');
 const resetCodeBtn = document.querySelector('.editor__reset');
 // Setup Ace
 let codeEditor = ace.edit("editorCode");
-let defaultCode = `#include<stdio.h>
+let defaultCode = `
+#include<stdio.h>
 
 int main(){
 // write your code here **Happy Coding**
 
     return 0;
-}
-`;
+}`;
 
 let editorLib = {
     init() {

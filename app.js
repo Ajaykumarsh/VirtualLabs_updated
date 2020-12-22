@@ -82,9 +82,9 @@ app.post("/compile",checkUser, (req, res) => {
 
     // const sourcecode = req.body.code;// stores the source code
     const test ="";  //stores the input 
-    var language = "cpp";
+    var language = "c";
 const sourcecode =req.body.code;
-// console.log(test);
+console.log(sourcecode);
     let c = new compile()
     c.com(sourcecode, test, language);
     res.redirect("/compile");

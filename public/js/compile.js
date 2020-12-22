@@ -4,9 +4,9 @@ const { stderr } = require("process");
 
  module.exports=class compile{
     com=(sourcecode,test,language)=>{
-        if(language==="cpp"){
+        if(language==="c"){
             // console.log("entered cpp");
-            let resultPromise = cpp.runSource(sourcecode, { stdin:test });
+            let resultPromise = c.runSource(sourcecode, { stdin:test });
             resultPromise
             .then(result => {
                 if(result.stderr===''){
@@ -34,7 +34,7 @@ const { stderr } = require("process");
             // let resultPromise = java.runSource(sourcecode);
             // resultPromise                                                        
             //     .then(result => {
-            //         console.log(result.stdout);//result object
+            //         console.log(result);//result object
             //     })
             //     .catch(err => {
             //         console.log("error has occures");
