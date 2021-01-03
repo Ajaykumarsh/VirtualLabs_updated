@@ -17,7 +17,7 @@ passport.serializeUser(function(user, done) {
 passport.use(new GoogleStrategy({
     clientID: '482972839762-iqrbton6o0boqsiuovoj2v5agududo2n.apps.googleusercontent.com',
     clientSecret: 'MOhH19HqjGnj608VawVLoYw1',
-    callbackURL: "http://localhost:3000/admin/google/callback"
+    callbackURL: "https://virtuallabs-dsce.herokuapp.com/admin/google/callback"
   },
   function(accessToken, refreshToken, profile, done) {
     // User.findOrCreate({ googleId: profile.id }, function (err, user) {

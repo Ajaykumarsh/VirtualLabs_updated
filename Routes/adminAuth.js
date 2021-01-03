@@ -34,7 +34,7 @@ router.get('/google/callback',bodyPar,cook,
     passport.authenticate('google', { failureRedirect: '/loginDirect' }),
     function (req, res) {
         // Successful authentication, redirect home.
-        res.send(req.user.displayName);
+        res.send(`Welcome ${req.user.displayName}`);
     });
 
 
