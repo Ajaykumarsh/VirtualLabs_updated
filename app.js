@@ -5,6 +5,7 @@ const session = require("express-session");
 
 const studentRouter = require("./Routes/StudentAuth.js");
 const quiz_solution = require("./Routes/quiz_solution.js");
+const adminRouter=require('./Routes/adminAuth.js')
 const path = require("path");
 const compile = require("./public/js/compile.js");
 const bodyParser = require("body-parser");
@@ -30,6 +31,7 @@ app.use(
 
 app.use("/StudentAuthentication", studentRouter);
 app.use("/quiz", quiz_solution);
+app.use('/admin',adminRouter);
 
 const checkUser = (req, res, next) => {
   if (req.session.usn == undefined) {
@@ -39,21 +41,16 @@ const checkUser = (req, res, next) => {
   }
 };
 
-//  const getUsn=(req,res,next)=>{
-//     if(req.session.usn==undefined){
-//         next()
-//     }else{
 
-//         console.log(req.session.usn);
 
-//         // getusn(req.session.usn);
-//         next();
-//     }
 
-// }
+
 app.get("/", (req, res) => {
   res.redirect("/home");
 });
+app.get('/loginDirect',(req,res)=>{
+  res.sendFile(path.join(__dirname, "views", "LoginDirect.html"));
+})
 app.get("/home", (req, res) => {
   res.sendFile(path.join(__dirname, "views", "home.html"));
 });
