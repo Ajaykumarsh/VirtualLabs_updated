@@ -9,12 +9,14 @@
     <script src="/Semantic/semantic.min.js"></script>
     <script src="js/script.js"></script>
     <script src="js/StudentLogin.js"></script>
+    
     <link rel="stylesheet" href="/home.css" />
     <!-- <script src="/Routes/StudentAuth.js"></script> -->
     <link rel="icon" href="images\dscelogo.png" />
-    <title>DS-Lab</title>
+    <title>CPL-Lab</title>
   </head>
   <body>
+    
     <h1 class="ui header" style="text-align: center" id="head">
       <a class="ui circular image" href="http://dsce.edu.in"
         ><img src="images/dscelogo.jpg"
@@ -59,41 +61,30 @@
                 <!-- <button class="ui icon dropdown button"> -->
                 <!-- <a href="/cpl_lab1"><span class="text">Lab Program 1</span></a>
        -->
-                <a href="/cpl_lab1"
-                  ><button class="ui button">Lab Program 1</button></a
-                >
+                <form action="">
+               <input
+                  type="button"
+                  class="ui button"
+                  id="cpl_lab1"
+                  value="Lab Program 1"
+                  onclick="ProgramChoose()"
+                  
+                />
 
-                <!-- <span class="text">Lab Program 1</span> -->
-                <!-- <div class="menu">
-          <a class="item" href="/stack">Stack</a>
-          <a class="item" href="infixtopostfix.php">Infix to Postfix</a>
-          <a class="item" href="ratmaze.php">Maze</a>
-        </div> -->
-                <!-- </button><br> -->
                 <br />
                 <br />
                 <br />
-                <!-- <button class="ui icon dropdown button"> -->
+
                 <a href="/cpl_lab2"
                   ><button class="ui button">Lab Program 2</button></a
                 >
-                <!-- <div class="menu">
-          <a class="item" href="queue.php">Queue</a>
-          <a class="item" href="queue.php">Calculator</a>
-          <a class="item" href="queue.php">Maze</a>
-        </div> -->
-                <!-- </button><br> -->
+
                 <br />
                 <br />
                 <br />
                 <a href="/cpl_lab3"
                   ><button class="ui button">Lab Program 3</button></a
                 >
-                <!-- <div class="menu">
-          <a class="item" href="singlylinkedlist.php">Singly Linked List</a>
-          <a class="item" href="singlylinkedlist.php">Calculator</a>
-          <a class="item" href="singlylinkedlist.php">Maze</a>
-        </div> -->
                 <br />
                 <br />
                 <br />
@@ -139,6 +130,7 @@
                 >
                 <br />
                 <br />
+                <!-- </form> -->
               </div>
             </div>
 
@@ -185,11 +177,15 @@
         </div>
       </div>
     </div>
-    <script language="javascript">
+    <!-- <script language="javascript">
       $(document).ready(function () {
         $(".ui.accordion").accordion();
         $(".ui.dropdown").dropdown();
       });
-    </script>
+    </script> -->
+  </div>
+  <div id="demo"></div>
+  <script src="js/CplPrograms.js"></script>
   </body>
+ 
 </html>
