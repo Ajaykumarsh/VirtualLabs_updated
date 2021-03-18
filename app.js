@@ -109,7 +109,7 @@ app.get("/cpl_labs", checkUser, (req, res) => {
   res.sendFile(path.join(__dirname, "views", "cpl_labs.html"));
 });
 app.get("/cpl", checkUser, (req, res) => {
-  res.sendFile(path.join(__dirname, "views", "cpl.html"));
+  res.sendFile(path.join(__dirname, "views/Templets", "subjectTemplet.html"));
 });
 
 //Cn Labs routes
