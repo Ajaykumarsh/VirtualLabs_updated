@@ -1,209 +1,218 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Virtual Lab</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="js/jquery-3.4.1.min.js"></script>
-        <link rel="stylesheet" href="/Semantic/semantic.min.css">
-        <script src="/Semantic/semantic.min.js"></script>
-        <!-- <script src="js/StudentLogin.js"></script> -->
-        <!-- <script>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Virtual Lab</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <link rel="stylesheet" href="/Semantic/semantic.min.css">
+  <script src="/Semantic/semantic.min.js"></script>
+  <!-- <script src="js/StudentLogin.js"></script> -->
+  <!-- <script>
            $( document ).ready(function() {
         console.log( "document loaded" );
         document.getElementsByClassName("use").innerHTML="uasjdljdasd";
     });
         </script> -->
-        <script src="js/Userfetch.js"></script>
-        <link rel="stylesheet" href="/home.css">
-        <link rel="icon" href="images\dscelogo.png">
-        <title>Virtual-Labs</title>
-        
+  <script src="js/Userfetch.js"></script>
+  <link rel="stylesheet" href="/home.css">
+  <link rel="icon" href="images\dscelogo.png">
+  <title>Virtual-Labs</title>
+
 </head>
+
 <body>
 
-<h1 class="ui header" style="text-align:center" id = "head">
-      <a class="ui circular image" href="http://dsce.edu.in"><img src="images/dscelogo.jpg"></a>
-  <a href="/titles">Virtual Labs</a>
-</h1>
-<div id="toTop"><i class="chevron up icon"></i></div>
-<div id="toTop"><i class="chevron up icon"></i></div>
+  <h1 class="ui header" style="text-align:center" id="head">
+    <a class="ui circular image" href="http://dsce.edu.in"><img src="images/dscelogo.jpg"></a>
+    <a href="/titles">Virtual Labs</a>
+  </h1>
+  <div id="toTop"><i class="chevron up icon"></i></div>
+  <div id="toTop"><i class="chevron up icon"></i></div>
   <div class="ui  light grey inverted secondary huge menu">
-  <a class="header item" href="/">
-    Home
-  </a>
- <a class="item">
-    About Us
-  </a> 
-   <h1 class="use"></h1>
-  <a class="item" href="#">Placaments Preparation</a>
-  <a class="item" href="/StudentAuthentication/Logout">  Logout</a>
-</div>
-</div>
-<div id="toTop"><i class="chevron up icon"></i></div>
-<div class="ui container" id="CardGrid">
-  <div class="ui stackable grid">
-    <div class="four wide column">
-      <div class="ui raised card" id="car1">
-       <div class="content" id="Card1">
-      <div class="header">
-            <a href="#">
-             1st sem
-            </a></div>
-       </div>
-         <div class="content">
-           <span class="CardBody">
-             Contains lab programs
-           </span>
-           <br><br>
-           <a class="ui button" href="#" >Go</a>
-         </div>
-      </div> 
-    </div>
-      
-    <div class="four wide column">
-        <div class="ui raised card" id="car2">
-       <div class="content" id="Card2">
-      <div class="header">
-         <a href="/2nd">
-             2nd sem
-         </a>
-      </div>
-       </div>
-         <div class="content">
-           <span class="CardBody">
-            Contains lab programs
-           </span>
-           <br><br>
-           <a class="ui button" href="/2nd" >Go</a>
-         </div>
-    </div>
+    <a class="header item" href="/">
+      Home
+    </a>
+    <a class="item">
+      About Us
+    </a>
+    <h1 class="use"></h1>
+    <a class="item" href="#">Placaments Preparation</a>
+    <a class="item" href="/StudentAuthentication/Logout"> Logout</a>
   </div>
+  </div>
+  <div id="toTop"><i class="chevron up icon"></i></div>
+  <div class="ui container" id="CardGrid">
+    <div class="ui stackable grid">
+      <div class="four wide column">
+        <div class="ui raised card" id="car1">
+          <div class="content" id="Card1">
+            <div class="header">
+              <a href="#">
+                1st sem
+              </a>
+            </div>
+          </div>
+          <div class="content">
+            <span class="CardBody">
+              Contains lab programs
+            </span>
+            <br><br>
+            <a class="ui button" onclick="fun(1)" href="#">Go</a>
+          </div>
+        </div>
+      </div>
 
-    <div class="four wide column">
+       <div class="four wide column">
+        <div class="ui raised card" id="car2">
+          <div class="content" id="Card2">
+            <div class="header">
+              <a href="/2nd">
+                2nd sem
+              </a>
+            </div>
+          </div>
+          <div class="content">
+            <span class="CardBody">
+              Contains lab programs
+            </span>
+            <br><br>
+            <a class="ui button" onclick="fun('2')" href="/2nd">Go</a>
+          </div>
+        </div>
+      </div>
+
+     <div class="four wide column">
         <div class="ui raised card" id="car3">
-       <div class="content" id="Card3">
-      <div class="header">
-         <a href="#" >
-             3rd sem
-         </a>
-      </div>
-       </div>
-         <div class="content">
-           <span class="CardBody">
-            Contains lab programs
-           </span>
-           <br><br>
-           <a class="ui button" href="#" >Go</a>
-         </div>
-  
-      </div>
+          <div class="content" id="Card3">
+            <div class="header">
+              <a href="#">
+                3rd sem
+              </a>
+            </div>
+          </div>
+          <div class="content">
+            <span class="CardBody">
+              Contains lab programs
+            </span>
+            <br><br>
+            <a class="ui button" onclick="fun(3)" href="#">Go</a>
+          </div>
+
+        </div>
       </div>
 
       <div class="four wide column">
         <div class="ui raised card" id="car4">
-       <div class="content" id="Card4">
-      <div class="header">
-         <a href="/4th" >
-             4th sem
-         </a>
+          <div class="content" id="Card4">
+            <div class="header">
+              <a href="/4th">
+                4th sem
+              </a>
+            </div>
+          </div>
+          <div class="content">
+            <span class="CardBody">
+              Contains lab programs
+            </span>
+            <br><br>
+            <a class="ui button" onclick="fun(4)" href="/4th">Go</a>
+          </div>
+
+        </div>
       </div>
-       </div>
-         <div class="content">
-           <span class="CardBody">
-            Contains lab programs
-           </span>
-           <br><br>
-           <a class="ui button" href="/4th" >Go</a>
-         </div>
-  
-      </div>
-      </div>
-      
-    <div class="four wide column">
+
+      <div class="four wide column">
         <div class="ui  raised card" id="car5">
-       <div class="content" id="Card5">
-      <div class="header">
-         <a href="#" >
-             5th sem
-         </a>
+          <div class="content" id="Card5">
+            <div class="header">
+              <a href="#">
+                5th sem
+              </a>
+            </div>
+          </div>
+          <div class="content">
+            <span class="CardBody">
+              Contains lab programs
+            </span>
+            <br><br>
+            <a class="ui button" onclick="fun(5)" href="/5th">Go</a>
+          </div>
+
+        </div>
       </div>
-       </div>
-         <div class="content">
-           <span class="CardBody">
-            Contains lab programs
-           </span>
-           <br><br>
-           <a class="ui button" href="/5th" >Go</a>
-         </div>
-  
-      </div>
-      </div>
-      
+
       <div class="four wide column">
         <div class="ui raised card" id="car6">
-       <div class="content" id="Card6">
-      <div class="header">
-         <a href="/6th" >
-             6th sem
-         </a>
-      </div>
-       </div>
-         <div class="content">
-           <span class="CardBody">
-            Contains lab programs
-           </span>
-           <br><br>
-           <a class="ui button" href="/6th" >Go</a>
-         </div>
-  
-      </div>
-      </div>
-  
-      <div class="four wide column">
-        <div class="ui raised card">
-       <div class="content" id="Card7">
-      <div class="header">
-         <a href="#" >
-            7th sem
-         </a>
-      </div>
-       </div>
-         <div class="content">
-           <span class="CardBody">
-            Contains lab programs
-           </span>
-           <br><br>
-           <a class="ui button" href="#">Go</a>
-         </div>
-  
-      </div>
+          <div class="content" id="Card6">
+            <div class="header">
+              <a href="/6th">
+                6th sem
+              </a>
+            </div>
+          </div>
+          <div class="content">
+            <span class="CardBody">
+              Contains lab programs
+            </span>
+            <br><br>
+            <a class="ui button" onclick="fun(6)" href="/6th">Go</a>
+          </div>
+
+        </div>
       </div>
 
       <div class="four wide column">
         <div class="ui raised card">
-       <div class="content" id="Card8">
-      <div class="header">
-         <a href="#" >
-             8th sem
-         </a>
+          <div class="content" id="Card7">
+            <div class="header">
+              <a href="#">
+                7th sem
+              </a>
+            </div>
+          </div>
+          <div class="content">
+            <span class="CardBody">
+              Contains lab programs
+            </span>
+            <br><br>
+            <a class="ui button" onclick="fun(7)" href="#">Go</a>
+          </div>
+
+        </div>
       </div>
-       </div>
-         <div class="content">
-           <span class="CardBody">
-            Contains lab programs
-           </span>
-           <br><br>
-           <a class="ui button" href="#">Go</a>
-         </div>
-  
+
+      <div class="four wide column">
+        <div class="ui raised card">
+          <div class="content" id="Card8">
+            <div class="header">
+              <a href="#">
+                8th sem
+              </a>
+            </div>
+          </div>
+          <div class="content">
+            <span class="CardBody">
+              Contains lab programs
+            </span>
+            <br><br>
+            <a class="ui button" onclick="fun(8)" href="#">Go</a>
+          </div>
+
+        </div>
       </div>
-      </div>
-  </div>
     </div>
   </div>
   </div>
+  </div>
 </body>
+<script>
+  function fun(i){
+    sessionStorage.setItem('sem',i)
+  }
+</script>
+
 </html>

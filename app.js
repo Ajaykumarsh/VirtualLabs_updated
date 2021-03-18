@@ -62,9 +62,7 @@ app.get("/stack", checkUser, (req, res) => {
 app.get("/compile", checkUser, (req, res) => {
   res.sendFile(path.join(__dirname, "views", "compile.html"));
 });
-app.get("/cn", checkUser, (req, res) => {
-  res.sendFile(path.join(__dirname, "views", "cn.html"));
-});
+
 
 app.post("/compile", checkUser, (req, res) => {
   // const sourcecode = req.body.code;// stores the source code
@@ -92,17 +90,20 @@ app.get("/ExceptionalHand", checkUser, (req, res) => {
   res.sendFile(path.join(__dirname, "views", "ExceptionalHand.html"));
 });
 app.get("/cn", checkUser, (req, res) => {
-  res.sendFile(path.join(__dirname, "views", "cn.html"));
+  // res.sendFile(path.join(__dirname, "views", "cn.html"));
+  res.sendFile(path.join(__dirname, "views/Templets", "subjectTemplet.html"));
 });
 app.get("/networkutilities", checkUser, (req, res) => {
   res.sendFile(path.join(__dirname, "views", "networkutilities.html"));
 });
 
 app.get("/2nd", checkUser, (req, res) => {
-  res.sendFile(path.join(__dirname, "views", "2ndsem.html"));
+  // res.sendFile(path.join(__dirname, "views", "2ndsem.html"));
+  res.sendFile(path.join(__dirname, "views/Templets", "semTemplet.html"));
 });
 app.get("/5th", checkUser, (req, res) => {
-  res.sendFile(path.join(__dirname, "views", "5sem.html"));
+  // res.sendFile(path.join(__dirname, "views", "5sem.html"));
+  res.sendFile(path.join(__dirname, "views/Templets", "semTemplet.html"));
 });
 app.get("/cpl_labs", checkUser, (req, res) => {
   res.sendFile(path.join(__dirname, "views", "cpl_labs.html"));
@@ -113,8 +114,9 @@ app.get("/cpl", checkUser, (req, res) => {
 
 //Cn Labs routes
 
-app.get("/cn_lab1", checkUser, (req, res) => {
-  res.sendFile(path.join(__dirname, "views/cnlab", "cnlab1.html"));
+app.get("/cn_lab", checkUser, (req, res) => {
+  // res.sendFile(path.join(__dirname, "views/cnlab", "cnlab1.html"));
+  res.sendFile(path.join(__dirname, "views/Templets", "labTemplet.html"));
 });
 app.get("/cn_lab2", checkUser, (req, res) => {
   res.sendFile(path.join(__dirname, "views/cnlab", "cnlab2.html"));
