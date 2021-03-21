@@ -107,7 +107,25 @@ const videoLinks={
     "Computer Networks":{
         '1':'https://www.youtube.com/embed/-udal7o_P-c?list=PLRAfX2aR2KAazEytznqLek1K1M93OzukK',
         '2':'https://www.youtube.com/embed/paU3HkHucHg?list=PLRAfX2aR2KAazEytznqLek1K1M93OzukK',
-        '3':'https://www.youtube.com/embed/XVjfn8wbHuY?list=PLRAfX2aR2KAazEytznqLek1K1M93OzukK'
+        '3':'https://www.youtube.com/embed/XVjfn8wbHuY?list=PLRAfX2aR2KAazEytznqLek1K1M93OzukK',
+        '4':'https://www.youtube.com/embed/FGdsCLWJjXM?list=PLRAfX2aR2KAazEytznqLek1K1M93OzukK',
+        '5':'https://www.youtube.com/embed/wWrY3jynm4I?list=PLRAfX2aR2KAazEytznqLek1K1M93OzukK',
+        '6':'https://www.youtube.com/embed/lUlMmVwFAY0?list=PLRAfX2aR2KAazEytznqLek1K1M93OzukK',
+        '7':'',
+        '8':'https://www.youtube.com/embed/O9Aq8jIkNfM?list=PLRAfX2aR2KAazEytznqLek1K1M93OzukK',
+        '9':'https://www.youtube.com/embed/5sHAx-WcES0?list=PLRAfX2aR2KAazEytznqLek1K1M93OzukK',
+        '10':'https://www.youtube.com/embed/L_ZuFr_9OjQ?list=PLRAfX2aR2KAazEytznqLek1K1M93OzukK',
+        '11':'https://www.youtube.com/embed/HwDyTcYUJng?list=PLRAfX2aR2KAazEytznqLek1K1M93OzukK',
+        '12':'https://www.youtube.com/embed/NMM-CHlxoo0?list=PLRAfX2aR2KAazEytznqLek1K1M93OzukK',
+        '13':'https://www.youtube.com/embed/O3fNV83mvhI?list=PLRAfX2aR2KAazEytznqLek1K1M93OzukK',
+        '14':'https://www.youtube.com/embed/wpO6ftVNGHo?list=PLRAfX2aR2KAazEytznqLek1K1M93OzukK',
+        '15':'https://www.youtube.com/embed/J0aJ4a3WeB8?list=PLRAfX2aR2KAazEytznqLek1K1M93OzukK',
+        '16':'https://www.youtube.com/embed/piSfKLFaCPM?list=PLRAfX2aR2KAazEytznqLek1K1M93OzukK',
+        '17':'https://www.youtube.com/embed/6mP-0CMbLm0?list=PLRAfX2aR2KAazEytznqLek1K1M93OzukK',
+        '18':'https://www.youtube.com/embed/awOisNcb9ms?list=PLRAfX2aR2KAazEytznqLek1K1M93OzukK',
+
+
+
     },
 }
     
