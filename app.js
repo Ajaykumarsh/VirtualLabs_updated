@@ -2,11 +2,12 @@ require("newrelic");
 const express = require("express");
 const app = express();
 const session = require("express-session");
+const path=require('path')
 
 const studentRouter = require("./Routes/StudentAuth.js");
 const quiz_solution = require("./Routes/quiz_solution.js");
 const adminRouter = require("./Routes/adminAuth.js");
-const path = require("path");
+
 const compile = require("./public/js/compile.js");
 const bodyParser = require("body-parser");
 

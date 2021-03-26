@@ -5,7 +5,11 @@ const router = express.Router();
 const cookieSession = require('cookie-session')
 const bodyParser=require('body-parser');
 const { Passport } = require('passport');
+const excelW=require('excel4node')
+const path=require('path')
+const excelR=require('exceljs')
 require('../public/js/adminconf')
+
 
 
 
@@ -38,7 +42,8 @@ router.get('/google/callback',bodyPar,cook,
         // Successful authentication, redirect home.
         const admin=await admins.findById(req.user._json.email)
         if(admin)
-        res.send(`Welcome ${req.user.displayName}`);
+        // res.send(`Welcome ${req.user.displayName}`);
+        res.sendFile(path.join(__dirname, "../views/Templets", "Results.html"));
         else
         res.send("olaola")
     });
@@ -49,6 +54,24 @@ router.get("/google/logout",bodyPar,cook,(req,res)=>{
     req.logout();
     res.redirect('/loginDirect');
 });
+
+
+
+router.get('/StudentRes',bodyPar,(req,res)=>{
+    wb=new excelR.Workbook();
+  wb.xlsx.readFile('./public/ExcelData/A.xlsx').then(()=>{
+    ws=wb.getWorksheet('Computer Programming Laboratory')
+    var rowCount=(ws.getRow(1).getCell(1).value);
+    var colCount=(ws.getRow(1).getCell(2).value);
+    var obj={};
+    for(let i=2;i<=rowCount;i++){
+        obj[`${ws.getRow(i).getCell(1).value}`]=ws.getRow(i).getCell(colCount).value;
+    }
+    res.send(obj)
+  })
+
+})
+
 
 
 

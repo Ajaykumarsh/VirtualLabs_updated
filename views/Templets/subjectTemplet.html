@@ -28,8 +28,8 @@
         </div>
     </div>
     <div class="ui container" id="cont">
-        <h2 class="ui header" style="font-size: 35px; margin-left: 10px">
-            Computer Networks
+        <h2 id="Title" class="ui header" style="font-size: 35px; margin-left: 10px">
+            
         </h2>
         <div class="ui stackable grid">
             <div class="four wide column">
@@ -44,120 +44,24 @@
             <div class="twelve wide stretched column">
                 <div class="ui segment">
                     <div id="int" align="justify">
-                        A computer network is a set of computers connected together for
-                        the purpose of sharing resources. The most common resource shared
-                        today is connection to the Internet. Other shared resources can
-                        include a printer or a file server.<br /><br />
-                        The Internet itself can be considered a computer network.
+                        
                     </div>
 
-                    <!-- <div id="quiz" style="display: none">
-              <div class="ui bulleted list">
-                <h2 id="demo" style="text-align: center"></h2>
-                <a
-                  class="item"
-                  style="visibility: hidden"
-                  href="/quiz/osi"
-                  id="quizd"
-                  >Subnetting</a
-                >
-              </div>
-            </div> -->
-
-                    <div id="lis" style="display: none">
-                        <div id="labs" style="display: inline-block">
-                            <!-- <a href="/cn_lab1"><button class="ui button">Lab Program 1</button></a>
-
-                            <br />
-                            <br />
-                            <br />
-
-                            <a href="/cn_lab2"><button class="ui button">Lab Program 2</button></a>
-
-                            <br />
-                            <br />
-                            <br />
-                            <a href="/cn_lab3"><button class="ui button">Lab Program 3</button></a>
-                            <br />
-                            <br />
-                            <br />
-                            <a href="/cn_lab4"><button class="ui button">Lab Program 4</button></a>
-                            <br />
-                            <br />
-                            <br />
-                            <a href="/cn_lab5"><button class="ui button">Lab Program 5</button></a>
-                            <br />
-                            <br />
-                            <br />
-                            <a href="/cn_lab6"><button class="ui button">Lab Program 6</button></a>
-                            <br />
-                            <br />
-                            <br />
-                            <a href="/cn_lab7"><button class="ui button">Lab Program 7</button></a>
-                            <br />
-
-                            <br />
-                            <br />
-                            <a href="/cn_lab8"><button class="ui button">Lab Program 8</button></a>
-                            <br />
-                            <br />
-                            <br />
-                            <a href="/cn_lab9"><button class="ui button">Lab Program 9</button></a>
-                            <br />
-                            <br />
-                            <br />
-                            <a href="/cn_lab10"><button class="ui button">Lab Program 10</button></a>
-                            <br />
-                            <br />
-                            <br />
-                            <a href="/cn_lab11"><button class="ui button">Lab Program 11</button></a>
-                            <br />
-                            <br />
-                            <br />
-                            <a href="/cn_lab12"><button class="ui button">Lab Program 12</button></a>
-                            <br />
-                            <br />
-                            <br />
-                            <a href="/cn_lab13"><button class="ui button">Lab Program 13</button></a>
-                            <br />
-                            <br />
-                            <br />
-                            <a href="/cn_lab14"><button class="ui button">Lab Program 14</button></a>
-                            <br />
-                            <br />
-                            <br />
-                            <a href="/cn_lab15"><button class="ui button">Lab Program 15</button></a>
-                            <br />
-                            <br />
-                            <br />
-                            <a href="/cn_lab16"><button class="ui button">Lab Program 16</button></a>
-                            <br />
-                            <br />
-                            <br />
-                            <a href="/cn_lab17"><button class="ui button">Lab Program 17</button></a>
-                            <br />
-                            <br />
-                            <br />
-                            <a href="/cn_lab18"><button class="ui button">Lab Program 18</button></a>
-                            <br />
-                            <br />
-                            <br /> -->
-                            <!-- </form> -->
-                        </div>
-                    </div>
-
-                    <div id="pre" style="display: none">
-                        To make students get better in Computer Networks.<br />
-                    </div>
-
-                    <div id="faqs" style="display: none">
-                        <div id="faqData" class="ui styled accordion">                            
-                        </div>
-                    </div>
 
                 </div>
             </div>
+
+            <div id="pre" style="display: none"><br />
+            </div>
+
+            <div id="faqs" style="display: none">
+                <div id="faqData" class="ui styled accordion">
+                </div>
+            </div>
+
         </div>
+    </div>
+    </div>
     </div>
     <script language="javascript">
         $(document).ready(function () {
@@ -168,27 +72,28 @@
         data = JSON.parse(sessionStorage.getItem('subData'))
         var s = sessionStorage.getItem('subject');
         data = data[s];
-        document.getElementById('int').innerHTML=data.introduction;
-        document.getElementById('pre').innerHTML=data.objective;
+        document.getElementById('Title').innerHTML = s;
+        document.getElementById('int').innerHTML = data.introduction;
+        document.getElementById('pre').innerHTML = data.objective;
 
-        var str=''
-        var st=''
-        for(i in data.faqs){
-            str+=`<div class="title"><i class="dropdown icon"></i>${data.faqs[i].q}</div>
+        var str = ''
+        var st = ''
+        for (i in data.faqs) {
+            str += `<div class="title"><i class="dropdown icon"></i>${data.faqs[i].q}</div>
                   <div class="content"><p class="transition hidden">${data.faqs[i].a}</p></div>`
         }
 
-        for(var j=1;j<=data.lab;j++){
-            st+=`<a href="/cn_lab" onclick='labLink("${j}")'><button class="ui button">Lab Program ${j}</button></a>
+        for (var j = 1; j <= data.lab; j++) {
+            st += `<a href="/cn_lab" onclick='labLink("${j}")'><button class="ui button">Lab Program ${j}</button></a>
                             <br />
                             <br />
                             <br />`
         }
 
-        document.getElementById('faqData').innerHTML=str;
-        document.getElementById('labs').innerHTML=st;
-        function labLink(i){
-            sessionStorage.setItem("Program",i);
+        document.getElementById('faqData').innerHTML = str;
+        document.getElementById('labs').innerHTML = st;
+        function labLink(i) {
+            sessionStorage.setItem("Program", i);
         }
     </script>
 </body>

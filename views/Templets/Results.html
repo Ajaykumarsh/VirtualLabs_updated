@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="/Semantic/semantic.min.css" />
+    <script src="js/semantic.min.js"></script>
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="/home.css" />
+    <link rel="icon" href="images\dscelogo.png" />
+    <script src="/js/Results.js"></script>
+    <title>Computer Networks</title>
+</head>
+
+<body>
+    <div class="ui header" style="text-align:center;" id ="head">
+        <a class="ui circular image" href="http://dsce.edu.in"><img src="/images/dscelogo.jpg"></a>  <span style="color:#3053AB"> Dayananda Sagar College Of Engineering</span> 
+       
+        <br><p style="font-size:25px;margin-top:10px; text-align: center;">A Self Learning initiative by the Department of Computer Science</p>
+      </div>
+      <div>
+    <div id="toTop"><i class="chevron up icon"></i></div>
+    <div>
+        <div class="ui light grey inverted secondary huge menu">
+            <a class="header item" href="/"> Home </a>
+            <a class="item"> About Us </a>
+            <select style="width:150px; background-color: rgb(109, 107, 107);color: white;" name="" id="">
+                <option value="A">A Sec</option>
+                <option value="B">B Sec</option>
+                <option value="C">C Sec</option>
+                <option value="D">D Sec</option>
+            </select>
+            <select id="subList" style="width:250px; background-color: rgb(109, 107, 107);color: white;" name="" id="">
+                <option value="A">A Sec</option>
+            </select>
+        </div>
+    </div>
+
+    <div style="margin-top: 5%;margin-left: 40%;">
+        <table id="display" border="2">
+            
+        </table>
+    </div>
+
+</body>
+<script>
+    var subList = JSON.parse(sessionStorage.getItem('semData'));
+    var sem = sessionStorage.getItem('sem')||'5';
+    subList = subList[sem]
+    str = ''
+    for (i in subList) {
+        str += `<option value="${subList[i].name}">${subList[i].name}</option>`
+    }
+    document.getElementById('subList').innerHTML = str;
+</script>
+
+</html>
