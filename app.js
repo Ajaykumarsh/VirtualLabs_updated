@@ -2,7 +2,7 @@ require("newrelic");
 const express = require("express");
 const app = express();
 const session = require("express-session");
-const path=require('path')
+const path = require("path");
 
 const studentRouter = require("./Routes/StudentAuth.js");
 const quiz_solution = require("./Routes/quiz_solution.js");
@@ -64,7 +64,6 @@ app.get("/compile", checkUser, (req, res) => {
   res.sendFile(path.join(__dirname, "views", "compile.html"));
 });
 
-
 app.post("/compile", checkUser, (req, res) => {
   // const sourcecode = req.body.code;// stores the source code
   const test = ""; //stores the input
@@ -78,97 +77,26 @@ app.post("/compile", checkUser, (req, res) => {
 app.get("/placement", checkUser, (req, res) => {
   res.sendFile(path.join(__dirname, "views", "placement.html"));
 });
-app.get("/problem1", checkUser, (req, res) => {
-  res.sendFile(path.join(__dirname, "views", "problem1.html"));
-});
-app.get("/problem2", checkUser, (req, res) => {
-  res.sendFile(path.join(__dirname, "views", "problem2.html"));
-});
-app.get("/problem3", checkUser, (req, res) => {
-  res.sendFile(path.join(__dirname, "views", "problem3.html"));
-});
+
 app.get("/ExceptionalHand", checkUser, (req, res) => {
   res.sendFile(path.join(__dirname, "views", "ExceptionalHand.html"));
 });
-app.get("/cn", checkUser, (req, res) => {
-  // res.sendFile(path.join(__dirname, "views", "cn.html"));
-  res.sendFile(path.join(__dirname, "views/Templets", "subjectTemplet.html"));
-});
+app.get(
+  ["/cn", "/cpl", "/syssoft", "/aiml", "/cybsec"],
+  checkUser,
+  (req, res) => {
+    // res.sendFile(path.join(__dirname, "views", "cn.html"));
+    res.sendFile(path.join(__dirname, "views/Templets", "subjectTemplet.html"));
+  }
+);
+
 app.get("/networkutilities", checkUser, (req, res) => {
   res.sendFile(path.join(__dirname, "views", "networkutilities.html"));
 });
 
-app.get("/2nd", checkUser, (req, res) => {
-  // res.sendFile(path.join(__dirname, "views", "2ndsem.html"));
-  res.sendFile(path.join(__dirname, "views/Templets", "semTemplet.html"));
-});
-app.get("/5th", checkUser, (req, res) => {
+app.get("/[1-8]", checkUser, (req, res) => {
   // res.sendFile(path.join(__dirname, "views", "5sem.html"));
   res.sendFile(path.join(__dirname, "views/Templets", "semTemplet.html"));
-});
-app.get("/cpl_labs", checkUser, (req, res) => {
-  res.sendFile(path.join(__dirname, "views", "cpl_labs.html"));
-});
-app.get("/cpl", checkUser, (req, res) => {
-  res.sendFile(path.join(__dirname, "views/Templets", "subjectTemplet.html"));
-});
-
-//Cn Labs routes
-
-app.get("/cn_lab", checkUser, (req, res) => {
-  // res.sendFile(path.join(__dirname, "views/cnlab", "cnlab1.html"));
-  res.sendFile(path.join(__dirname, "views/Templets", "labTemplet.html"));
-});
-app.get("/cn_lab2", checkUser, (req, res) => {
-  res.sendFile(path.join(__dirname, "views/cnlab", "cnlab2.html"));
-});
-app.get("/cn_lab3", checkUser, (req, res) => {
-  res.sendFile(path.join(__dirname, "views/cnlab", "cnlab3.html"));
-});
-app.get("/cn_lab4", checkUser, (req, res) => {
-  res.sendFile(path.join(__dirname, "views/cnlab", "cnlab4.html"));
-});
-app.get("/cn_lab5", checkUser, (req, res) => {
-  res.sendFile(path.join(__dirname, "views/cnlab", "cnlab5.html"));
-});
-app.get("/cn_lab6", checkUser, (req, res) => {
-  res.sendFile(path.join(__dirname, "views/cnlab", "cnlab6.html"));
-});
-app.get("/cn_lab7", checkUser, (req, res) => {
-  res.sendFile(path.join(__dirname, "views/cnlab", "cnlab7.html"));
-});
-app.get("/cn_lab8", checkUser, (req, res) => {
-  res.sendFile(path.join(__dirname, "views/cnlab", "cnlab8.html"));
-});
-app.get("/cn_lab9", checkUser, (req, res) => {
-  res.sendFile(path.join(__dirname, "views/cnlab", "cnlab9.html"));
-});
-app.get("/cn_lab10", checkUser, (req, res) => {
-  res.sendFile(path.join(__dirname, "views/cnlab", "cnlab10.html"));
-});
-app.get("/cn_lab11", checkUser, (req, res) => {
-  res.sendFile(path.join(__dirname, "views/cnlab", "cnlab11.html"));
-});
-app.get("/cn_lab12", checkUser, (req, res) => {
-  res.sendFile(path.join(__dirname, "views/cnlab", "cnlab12.html"));
-});
-app.get("/cn_lab13", checkUser, (req, res) => {
-  res.sendFile(path.join(__dirname, "views/cnlab", "cnlab13.html"));
-});
-app.get("/cn_lab14", checkUser, (req, res) => {
-  res.sendFile(path.join(__dirname, "views/cnlab", "cnlab14.html"));
-});
-app.get("/cn_lab15", checkUser, (req, res) => {
-  res.sendFile(path.join(__dirname, "views/cnlab", "cnlab15.html"));
-});
-app.get("/cn_lab16", checkUser, (req, res) => {
-  res.sendFile(path.join(__dirname, "views/cnlab", "cnlab16.html"));
-});
-app.get("/cn_lab17", checkUser, (req, res) => {
-  res.sendFile(path.join(__dirname, "views/cnlab", "cnlab17.html"));
-});
-app.get("/cn_lab18", checkUser, (req, res) => {
-  res.sendFile(path.join(__dirname, "views/cnlab", "cnlab18.html"));
 });
 
 var PORT = process.env.PORT || 3000;

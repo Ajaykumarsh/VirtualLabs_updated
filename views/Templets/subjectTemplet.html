@@ -76,6 +76,7 @@
     <script>
         data = JSON.parse(sessionStorage.getItem('subData'))
         var s = sessionStorage.getItem('subject');
+    
         data = data[s];
         document.getElementById('Title').innerHTML = s;
         document.getElementById('int').innerHTML = data.introduction;

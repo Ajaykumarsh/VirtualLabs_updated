@@ -46,6 +46,7 @@
     </div>
     <div class="ui container" id="CardGrid">
         <div id="renderElements" class="ui stackable grid">
+            <div>Hell</div>
             <!-- <div class="four wide column">
                 <div class="ui raised card" id="car1">
                     <div class="content" id="Card1">
@@ -72,8 +73,12 @@
 <script>
     
     data=JSON.parse(sessionStorage.getItem('semData'))
+  
     var s=sessionStorage.getItem('sem');
     data=data[s];
+    console.log("s value",s)
+    console.log(typeof(s))
+    console.log("daga coming from ",data);
     function render(){
         var str=''
             for(i in data){
@@ -99,10 +104,11 @@
 
 
         document.getElementById('renderElements').innerHTML=str;
-
+        console.log(data);
     }
     function subject(sub){
         console.log(sub);
+        console.log(data[i].link)
         // sessionStorage.setItem('subject',${data[i].subject})
         sessionStorage.setItem('subject',sub);
     }
