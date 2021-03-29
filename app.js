@@ -89,6 +89,9 @@ app.get(
     res.sendFile(path.join(__dirname, "views/Templets", "subjectTemplet.html"));
   }
 );
+app.get("/lab", checkUser, (req, res) => {
+  res.sendFile(path.join(__dirname, "views/Templets", "labTemplet.html"));
+});
 
 app.get("/networkutilities", checkUser, (req, res) => {
   res.sendFile(path.join(__dirname, "views", "networkutilities.html"));
