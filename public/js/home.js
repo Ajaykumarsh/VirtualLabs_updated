@@ -97,13 +97,13 @@ var sub = {
 
 const videoLinks = {
   "Computer Networks": {
-    1: "https://www.youtube.com/embed/-udal7o_P-c?list=PLRAfX2aR2KAazEytznqLek1K1M93OzukK",
-    2: "https://www.youtube.com/embed/paU3HkHucHg?list=PLRAfX2aR2KAazEytznqLek1K1M93OzukK",
+    1: "https://u.pcloud.link/publink/show?code=XZGgBWXZPFJeA3iCurpz6frcxlDgDfdFkcyX",
+    2: "https://u.pcloud.link/publink/show?code=XZUPBWXZ69VcotEzXfz7JXQAs0WphfPSafLk",
     3: "https://www.youtube.com/embed/XVjfn8wbHuY?list=PLRAfX2aR2KAazEytznqLek1K1M93OzukK",
     4: "https://www.youtube.com/embed/FGdsCLWJjXM?list=PLRAfX2aR2KAazEytznqLek1K1M93OzukK",
     5: "https://www.youtube.com/embed/wWrY3jynm4I?list=PLRAfX2aR2KAazEytznqLek1K1M93OzukK",
     6: "https://www.youtube.com/embed/lUlMmVwFAY0?list=PLRAfX2aR2KAazEytznqLek1K1M93OzukK",
-    7: "",
+    7: "https://cloud.degoo.com/embed/2NPvTLbGgFu_R9Ye9QMVxg",
     8: "https://www.youtube.com/embed/O9Aq8jIkNfM?list=PLRAfX2aR2KAazEytznqLek1K1M93OzukK",
     9: "https://www.youtube.com/embed/5sHAx-WcES0?list=PLRAfX2aR2KAazEytznqLek1K1M93OzukK",
     10: "https://www.youtube.com/embed/L_ZuFr_9OjQ?list=PLRAfX2aR2KAazEytznqLek1K1M93OzukK",
