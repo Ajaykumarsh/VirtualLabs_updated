@@ -76,7 +76,7 @@ var sub = {
     lab: 5,
   },
 
-  "Computer Networks": {
+  "Computer Networks Laboratory": {
     introduction: `A computer network is a set of computers connected together for
         the purpose of sharing resources. The most common resource shared
         today is connection to the Internet. Other shared resources can
@@ -112,46 +112,60 @@ var sub = {
 
     lab: 18,
   },
+  "System Software": {
+    introduction: "something", //write intro here
+    objective: "Objective", //Objective here
+    faqs: [
+      {
+        q: "What is a datastructure?",
+        a:
+          "In computer science, a data structure is a data organization, management, and storage format that enables efficient access and modification. More precisely, a data structure is a collection of data values, the relationships among them, and the functions or operations that can be applied to the data.",
+      },
+      // {
+      //   q: "What are some types of datastructures?",
+      //   a: "Some of them are Array,List,Union,Trees",
+      // },
+    ],
+    lab: 10,
+  },
 };
 
 const videoLinks = {
-  "Computer Networks": {
-    1: "https://p-def8.pcloud.com/cBZQ43sVDZExHbdMZZZyxiUG7ZQ5ZZBMFZkZWqOC7ZlpZkzZkVZS5ZepZGFZppZYHZ9kZ4zZzpZP5ZBHZqXZGgBWXZa6fEP2Vu84JMEoecbOfvhL8N20Sk/lab1.mp4",
-    2: "https://p-def8.pcloud.com/cBZQ43sVDZExHbdMZZZbAoUG7ZQ5ZZBMFZkZWqOC7ZlpZkzZkVZS5ZepZGFZppZYHZ9kZ4zZzpZP5ZBHZqXZGgBWXZRMnIUGJEbEF7YAstmRnDFH0wj3bV/lab1.mp4",
+  "Computer Networks Laboratory": {
+    1: "https://drive.google.com/file/d/1N5g6QhofPJMJ2UKQyFk3Mh9B4u7aFytn/preview",
+    2: "https://drive.google.com/file/d/1N5g6QhofPJMJ2UKQyFk3Mh9B4u7aFytn/preview",
     3: "https://p-def4.pcloud.com/cBZVz7DVDZKefbdMZZZAdiUG7ZQ5ZZBMFZkZlqm4kZA0ZkXZ1pZJFZm5Z55ZOJZdkZ0pZoFZmFZpFZoXZu0ZGPBWXZJTK2pQPQGTFIatTkzQkQ9XfXWEXk/lab3_dyn_rip.mp4",
     4: "https://p-def1.pcloud.com/cBZMMRDVDZOxKbdMZZZQqiUG7ZQ5ZZBMFZkZwBPkXZyFZFFZdkZspZJVZ0pZ3pZAJZXzZkXZoFZm7ZD7ZVHZcPBWXZzWkwrleApC09tOConNRnfjlvLA4V/lab4_static3.mp4",
     5: "https://p-def5.pcloud.com/cBZO5PDVDZlKcbdMZZZUqiUG7ZQ5ZZBMFZkZEJnSXZyHZrFZWHZRZPJZAHZ1zZbzZ6pZJ5Zr0ZTFZ1kZJJZkCBWXZuMLmylgFNgfHlrATjkYkBSwthqVV/lab5_subnet_intro.mp4",
     6: "https://p-def2.pcloud.com/cBZoiRDVDZSfabdMZZZ1tiUG7ZQ5ZZBMFZkZ6cQh7ZkHZ6FZOpZFJZFXZ2HZrHZvpZCXZUFZ1FZ7FZ6JZ1zZmCBWXZBxpveDISN8Y9N5bb49yg1jnAd8Ek/lab6_subnet-2.mp4",
     7: "",
-    8: "https://p-def8.pcloud.com/cBZL0xDVDZp6ShdMZZZatiUG7ZQ5ZZBMFZkZaaH5kZv0ZeFZ9JZwHZ7FZbpZf7Z77ZCpZ8pZhFZT5ZVVZuVZfCBWXZH9ntCO51QG4xitSfDXjdqXsFE7uy/DVR-lab8.mp4",
-    9: "https://p-def8.pcloud.com/cBZNMnDVDZilhhdMZZZH6iUG7ZQ5ZZBMFZkZne7IZdZqFZT7Zm7ZRZsFZyFZnJZoHZ1HZCXZlkZP5ZkXZWCBWXZfIO7h2x4Jz7eJQ86rnFnbJjQ7w2X/lab9_crc.mp4",
-    10: "https://p-def3.pcloud.com/cBZ88gDVDZHXWhdMZZZw6iUG7ZQ5ZZBMFZkZQdW9ZF5ZezZ6VZQXZ7HZy7ZCFZyJZ8kZbJZbpZepZMHZM5ZtCBWXZkap4MD0nw7hvx1ljnP4OLpX7v8zk/lab10_part1_stop%26wait.mp4",
-    11: "https://p-def7.pcloud.com/cBZFgODVDZP1PhdMZZZ5EiUG7ZQ5ZZBMFZkZi9Yn7ZbzZtJZCXZKVZyFZ40ZSFZWHZlJZYkZuVZW7ZwHZapZUCBWXZ3Yj1ubOEwmF01tl8T5LLCpqQz0GX/lab11_leak.mp4",
-    12: "https://p-def3.pcloud.com/cBZKIknVDZDaOhdMZZZjEiUG7ZQ5ZZBMFZkZYmAK7ZnHZsHZNXZXpZvpZdFZoHZIFZFXZ9FZmXZhJZL5ZN5ZNCBWXZnvMELXzT9oV012pvqeGDxktCEHXk/lab12_dns.mp4",
-    13: "https://p-def3.pcloud.com/cBZ8uH1VDZvSpSdMZZZlEiUG7ZQ5ZZBMFZkZvzy3kZXVZ5FZp0Zu5Z1FZIZx5Zp5ZRzZz7ZMHZkpZPpZOHZoCBWXZiae92nWgUpuTSj7lK2qmAVxSHwrX/lab13_dn2_root_dns.mp4",
-    14: "https://p-def5.pcloud.com/cBZ76A1VDZ5VeSdMZZZrEiUG7ZQ5ZZBMFZkZwDFskZgZtJZp0ZDpZSFZ5pZ7zZG5ZQ7Z8pZOFZbpZrkZ30Z0xBWXZIk6flMtQH3S0g8Uk6TWXQQla1U3k/lab14_DNS_hierarchy.mp4",
-    15: "https://p-def5.pcloud.com/cBZAVz1VDZN7SSdMZZZIOiUG7ZQ5ZZBMFZkZNYhw7ZW7ZqFZRHZypZI7ZMFZGpZJkZKJZaFZ1FZDJZoJZXVZpxBWXZvWpt6NfBhLS4nhCQ1sIMkbtV4gBX/lab15_dhcp1.mp4",
-    16: "https://p-def5.pcloud.com/cBZQW21VDZiBqSdMZZZXUiUG7ZQ5ZZBMFZkZ3WzJkZ5XZGJZsJZ17ZkVZdZ0Z4JZszZdJZMHZukZCkZEHZ4xBWXZJOE2UrDeAM4jIGDssA90nFU7IQrV/lab16_dhcp2.mp4",
-    17: "https://p-def3.pcloud.com/cBZwSseVDZSCQjdMZZZAUiUG7ZQ5ZZBMFZkZLin4VZm7ZzHZeHZe7ZT5ZoJZVJZlpZj5Z30ZGkZvpZKkZFkZjxBWXZ3MSHoeGhSDplRLKI7m8VcpRU2WCy/lab17_VLAN1.mp4",
-    18: "https://p-def2.pcloud.com/cBZmYP1VDZk7rSdMZZZcIiUG7ZQ5ZZBMFZkZE0GC7ZHzZpZEFZNpZsFZNJZGFZu5Z6pZaZnkZzHZGHZJFZsxBWXZ3oAAixTfnxyQY0XG4oI7ry2BIDKy/lab18_vlan2_router_on_stick.mp4",
+    8: "https://drive.google.com/file/d/1N5g6QhofPJMJ2UKQyFk3Mh9B4u7aFytn/preview",
+    // 9: "https://p-def8.pcloud.com/cBZNMnDVDZilhhdMZZZH6iUG7ZQ5ZZBMFZkZne7IZdZqFZT7Zm7ZRZsFZyFZnJZoHZ1HZCXZlkZP5ZkXZWCBWXZfIO7h2x4Jz7eJQ86rnFnbJjQ7w2X/lab9_crc.mp4",
+    // 10: "https://p-def3.pcloud.com/cBZ88gDVDZHXWhdMZZZw6iUG7ZQ5ZZBMFZkZQdW9ZF5ZezZ6VZQXZ7HZy7ZCFZyJZ8kZbJZbpZepZMHZM5ZtCBWXZkap4MD0nw7hvx1ljnP4OLpX7v8zk/lab10_part1_stop%26wait.mp4",
+    // 11: "https://p-def7.pcloud.com/cBZFgODVDZP1PhdMZZZ5EiUG7ZQ5ZZBMFZkZi9Yn7ZbzZtJZCXZKVZyFZ40ZSFZWHZlJZYkZuVZW7ZwHZapZUCBWXZ3Yj1ubOEwmF01tl8T5LLCpqQz0GX/lab11_leak.mp4",
+    // 12: "https://p-def3.pcloud.com/cBZKIknVDZDaOhdMZZZjEiUG7ZQ5ZZBMFZkZYmAK7ZnHZsHZNXZXpZvpZdFZoHZIFZFXZ9FZmXZhJZL5ZN5ZNCBWXZnvMELXzT9oV012pvqeGDxktCEHXk/lab12_dns.mp4",
+    // 13: "https://p-def3.pcloud.com/cBZ8uH1VDZvSpSdMZZZlEiUG7ZQ5ZZBMFZkZvzy3kZXVZ5FZp0Zu5Z1FZIZx5Zp5ZRzZz7ZMHZkpZPpZOHZoCBWXZiae92nWgUpuTSj7lK2qmAVxSHwrX/lab13_dn2_root_dns.mp4",
+    // 14: "https://p-def5.pcloud.com/cBZ76A1VDZ5VeSdMZZZrEiUG7ZQ5ZZBMFZkZwDFskZgZtJZp0ZDpZSFZ5pZ7zZG5ZQ7Z8pZOFZbpZrkZ30Z0xBWXZIk6flMtQH3S0g8Uk6TWXQQla1U3k/lab14_DNS_hierarchy.mp4",
+    // 15: "https://p-def5.pcloud.com/cBZAVz1VDZN7SSdMZZZIOiUG7ZQ5ZZBMFZkZNYhw7ZW7ZqFZRHZypZI7ZMFZGpZJkZKJZaFZ1FZDJZoJZXVZpxBWXZvWpt6NfBhLS4nhCQ1sIMkbtV4gBX/lab15_dhcp1.mp4",
+    // 16: "https://p-def5.pcloud.com/cBZQW21VDZiBqSdMZZZXUiUG7ZQ5ZZBMFZkZ3WzJkZ5XZGJZsJZ17ZkVZdZ0Z4JZszZdJZMHZukZCkZEHZ4xBWXZJOE2UrDeAM4jIGDssA90nFU7IQrV/lab16_dhcp2.mp4",
+    // 17: "https://p-def3.pcloud.com/cBZwSseVDZSCQjdMZZZAUiUG7ZQ5ZZBMFZkZLin4VZm7ZzHZeHZe7ZT5ZoJZVJZlpZj5Z30ZGkZvpZKkZFkZjxBWXZ3MSHoeGhSDplRLKI7m8VcpRU2WCy/lab17_VLAN1.mp4",
+    // 18: "https://p-def2.pcloud.com/cBZmYP1VDZk7rSdMZZZcIiUG7ZQ5ZZBMFZkZE0GC7ZHzZpZEFZNpZsFZNJZGFZu5Z6pZaZnkZzHZGHZJFZsxBWXZ3oAAixTfnxyQY0XG4oI7ry2BIDKy/lab18_vlan2_router_on_stick.mp4",
   },
   "Computer Programming ": {
     //put video links of CP Lab
   },
-  "System software": {
+  "System Software": {
     //Put video links of ss lab
-    1: "",
-    2: "",
-    3: "",
-    4: "",
-    5: "",
-    6: "",
-    7: "",
-    8: "",
-    9: "",
-    10: "",
-    1: "",
-    1: "",
+    1: "https://drive.google.com/file/d/1N5g6QhofPJMJ2UKQyFk3Mh9B4u7aFytn/preview",
+    2: "https://drive.google.com/file/d/1N5g6QhofPJMJ2UKQyFk3Mh9B4u7aFytn/preview",
+    3: "https://drive.google.com/file/d/1STasK4RG15FDqetJ4CXMrNhGnG0SYpYK/preview",
+    4: "https://drive.google.com/file/d/1xpnSQBhPdgzIfN4_qVMq99QC01sNlkgu/preview",
+    5: "https://drive.google.com/file/d/1RBpjJrWsfXB5rGwQxLEESsSJ_vE5wufA/preview",
+    6: "https://drive.google.com/file/d/1dPfpo5lwFlcp-_j_Q3yI8goKHUVdPHVZ/preview",
+    7: "https://drive.google.com/file/d/19PrxtMt3kAMasGZ_voaBuMTXB1VE8Ze3/preview",
+    8: "https://drive.google.com/file/d/1FAKH9_0ZJyYBO7DS7Tl-MXCruolmonCL/preview",
+    9: "https://drive.google.com/file/d/15_7llYbXoYlFv_Qaj17DMZBn-DMKhaB5/preview",
+    10: "https://drive.google.com/file/d/1wUVquVmO7JmmAl330MNWWD_IyL-27Wjc/preview",
   },
 };
 
