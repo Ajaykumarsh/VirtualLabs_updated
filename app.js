@@ -82,7 +82,7 @@ app.get("/ExceptionalHand", checkUser, (req, res) => {
   res.sendFile(path.join(__dirname, "views", "ExceptionalHand.html"));
 });
 app.get(
-  ["/cn", "/cpl", "/syssoft", "/aiml", "/cybsec"],
+  ["/cn", "/cpl", "/syssoft", "/aiml", "/cybsec", "/ada", "/dbms"],
   checkUser,
   (req, res) => {
     // res.sendFile(path.join(__dirname, "views", "cn.html"));

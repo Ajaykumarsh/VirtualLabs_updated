@@ -8,12 +8,31 @@ var sem = {
       subject: "Computer Programming Laboratory",
     },
   ],
+  3: [
+    {
+      //3rd sem
+    },
+  ],
+  4: [
+    {
+      name: "Analysis and Design of Algorithm",
+      tag: "Contains lab programs",
+      link: "ada",
+      subject: "Analysis and Design of Algorithm Laboratory",
+    },
+    {
+      name: "Database Management System",
+      tag: "Contains lab programs",
+      link: "dbms",
+      subject: "Database Management System Laboratory",
+    },
+  ],
   5: [
     {
       name: "Computer Networking Lab",
       tag: "Contains lab programs",
       link: "cn",
-      subject: "Computer Networks",
+      subject: "Computer Networks Laboratory",
     },
     {
       name: "AI and ML Lab",
@@ -98,13 +117,13 @@ var sub = {
 const videoLinks = {
   "Computer Networks": {
     1: "https://p-def8.pcloud.com/cBZQ43sVDZExHbdMZZZyxiUG7ZQ5ZZBMFZkZWqOC7ZlpZkzZkVZS5ZepZGFZppZYHZ9kZ4zZzpZP5ZBHZqXZGgBWXZa6fEP2Vu84JMEoecbOfvhL8N20Sk/lab1.mp4",
-    2: "https://p-def8.pcloud.com/cBZYGNsVDZ7yVbdMZZZ4diUG7ZQ5ZZBMFZkZCKRI7ZzHZbXZMHZwHZD7Zp5ZoJZrHZvpZJkZ95ZfpZlFZMFZUPBWXZPaeAIAsP2HFSAXQ9jp0pFQIkzuX0/lab2.mp4",
+    2: "https://p-def8.pcloud.com/cBZQ43sVDZExHbdMZZZbAoUG7ZQ5ZZBMFZkZWqOC7ZlpZkzZkVZS5ZepZGFZppZYHZ9kZ4zZzpZP5ZBHZqXZGgBWXZRMnIUGJEbEF7YAstmRnDFH0wj3bV/lab1.mp4",
     3: "https://p-def4.pcloud.com/cBZVz7DVDZKefbdMZZZAdiUG7ZQ5ZZBMFZkZlqm4kZA0ZkXZ1pZJFZm5Z55ZOJZdkZ0pZoFZmFZpFZoXZu0ZGPBWXZJTK2pQPQGTFIatTkzQkQ9XfXWEXk/lab3_dyn_rip.mp4",
     4: "https://p-def1.pcloud.com/cBZMMRDVDZOxKbdMZZZQqiUG7ZQ5ZZBMFZkZwBPkXZyFZFFZdkZspZJVZ0pZ3pZAJZXzZkXZoFZm7ZD7ZVHZcPBWXZzWkwrleApC09tOConNRnfjlvLA4V/lab4_static3.mp4",
     5: "https://p-def5.pcloud.com/cBZO5PDVDZlKcbdMZZZUqiUG7ZQ5ZZBMFZkZEJnSXZyHZrFZWHZRZPJZAHZ1zZbzZ6pZJ5Zr0ZTFZ1kZJJZkCBWXZuMLmylgFNgfHlrATjkYkBSwthqVV/lab5_subnet_intro.mp4",
     6: "https://p-def2.pcloud.com/cBZoiRDVDZSfabdMZZZ1tiUG7ZQ5ZZBMFZkZ6cQh7ZkHZ6FZOpZFJZFXZ2HZrHZvpZCXZUFZ1FZ7FZ6JZ1zZmCBWXZBxpveDISN8Y9N5bb49yg1jnAd8Ek/lab6_subnet-2.mp4",
-    7: "https://p-def8.pcloud.com/cBZL0xDVDZp6ShdMZZZatiUG7ZQ5ZZBMFZkZaaH5kZv0ZeFZ9JZwHZ7FZbpZf7Z77ZCpZ8pZhFZT5ZVVZuVZfCBWXZH9ntCO51QG4xitSfDXjdqXsFE7uy/DVR-lab8.mp4",
-    8: "",
+    7: "",
+    8: "https://p-def8.pcloud.com/cBZL0xDVDZp6ShdMZZZatiUG7ZQ5ZZBMFZkZaaH5kZv0ZeFZ9JZwHZ7FZbpZf7Z77ZCpZ8pZhFZT5ZVVZuVZfCBWXZH9ntCO51QG4xitSfDXjdqXsFE7uy/DVR-lab8.mp4",
     9: "https://p-def8.pcloud.com/cBZNMnDVDZilhhdMZZZH6iUG7ZQ5ZZBMFZkZne7IZdZqFZT7Zm7ZRZsFZyFZnJZoHZ1HZCXZlkZP5ZkXZWCBWXZfIO7h2x4Jz7eJQ86rnFnbJjQ7w2X/lab9_crc.mp4",
     10: "https://p-def3.pcloud.com/cBZ88gDVDZHXWhdMZZZw6iUG7ZQ5ZZBMFZkZQdW9ZF5ZezZ6VZQXZ7HZy7ZCFZyJZ8kZbJZbpZepZMHZM5ZtCBWXZkap4MD0nw7hvx1ljnP4OLpX7v8zk/lab10_part1_stop%26wait.mp4",
     11: "https://p-def7.pcloud.com/cBZFgODVDZP1PhdMZZZ5EiUG7ZQ5ZZBMFZkZi9Yn7ZbzZtJZCXZKVZyFZ40ZSFZWHZlJZYkZuVZW7ZwHZapZUCBWXZ3Yj1ubOEwmF01tl8T5LLCpqQz0GX/lab11_leak.mp4",
@@ -121,6 +140,18 @@ const videoLinks = {
   },
   "System software": {
     //Put video links of ss lab
+    1: "",
+    2: "",
+    3: "",
+    4: "",
+    5: "",
+    6: "",
+    7: "",
+    8: "",
+    9: "",
+    10: "",
+    1: "",
+    1: "",
   },
 };
 
