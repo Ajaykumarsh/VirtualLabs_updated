@@ -167,6 +167,15 @@ const videoLinks = {
     9: "https://drive.google.com/file/d/15_7llYbXoYlFv_Qaj17DMZBn-DMKhaB5/preview",
     10: "https://drive.google.com/file/d/1wUVquVmO7JmmAl330MNWWD_IyL-27Wjc/preview",
   },
+  "Analysis and Design of Algorithm": {
+    1:"https://drive.google.com/file/d/1xSiY0E8P1Ewd55wUdM-eWz18pIgUxf0I/preview",
+    2:"https://drive.google.com/file/d/1xZXDZCji6rhVUQzQHFHRIkvnWVUNwoSJ/preview",
+    3:"",
+    4:"https://drive.google.com/file/d/1xkj_nvSQl_9rWNl18af4Qq0d_fIUfsLP/preview",
+    5:"https://drive.google.com/file/d/1xggqTyfVmqe2U492D37AgFb73VD-zyyv/preview",
+    6:"https://drive.google.com/file/d/1xkw5hgIkLyoomB3qW5TfmyrbwQpn7ONQ/preview",
+    7:"https://drive.google.com/file/d/1xlKP2oayfF2SFU8190i3663E_Jj0rAn_/preview",
+  },
 };
 
 sessionStorage.setItem("semData", JSON.stringify(sem));
