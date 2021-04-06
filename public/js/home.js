@@ -15,7 +15,7 @@ var sem = {
   ],
   4: [
     {
-      name: "Analysis and Design of Algorithm",
+      name: "Analysis and Design of Algorithm Laboratory",
       tag: "Contains lab programs",
       link: "ada",
       subject: "Analysis and Design of Algorithm Laboratory",
@@ -128,7 +128,7 @@ var sub = {
     ],
     lab: 10,
   },
-  "Analysis and Design of Algorithm": {
+  "Analysis and Design of Algorithm Laboratory": {
     introduction: "something", //write intro here
     objective: "Objective", //Objective here
     faqs: [
@@ -183,7 +183,7 @@ const videoLinks = {
     9: "https://drive.google.com/file/d/15_7llYbXoYlFv_Qaj17DMZBn-DMKhaB5/preview",
     10: "https://drive.google.com/file/d/1wUVquVmO7JmmAl330MNWWD_IyL-27Wjc/preview",
   },
-  "Analysis and Design of Algorithm": {
+  "Analysis and Design of Algorithm Laboratory": {
     1:"https://drive.google.com/file/d/1xSiY0E8P1Ewd55wUdM-eWz18pIgUxf0I/preview",
     2:"https://drive.google.com/file/d/1xZXDZCji6rhVUQzQHFHRIkvnWVUNwoSJ/preview",
     3:"",
