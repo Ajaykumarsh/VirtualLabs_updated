@@ -128,6 +128,22 @@ var sub = {
     ],
     lab: 10,
   },
+  "Analysis and Design of Algorithm": {
+    introduction: "something", //write intro here
+    objective: "Objective", //Objective here
+    faqs: [
+      {
+        q: "What is a datastructure?",
+        a:
+          "In computer science, a data structure is a data organization, management, and storage format that enables efficient access and modification. More precisely, a data structure is a collection of data values, the relationships among them, and the functions or operations that can be applied to the data.",
+      },
+      // {
+      //   q: "What are some types of datastructures?",
+      //   a: "Some of them are Array,List,Union,Trees",
+      // },
+    ],
+    lab: 7,
+  },
 };
 
 const videoLinks = {
