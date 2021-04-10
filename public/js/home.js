@@ -196,4 +196,5 @@ const videoLinks = {
 
 sessionStorage.setItem("semData", JSON.stringify(sem));
 sessionStorage.setItem("subData", JSON.stringify(sub));
+sessionStorage.setItem("subject","Computer Networks Laboratory")
 sessionStorage.setItem("videoData", JSON.stringify(videoLinks));
