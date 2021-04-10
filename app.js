@@ -45,8 +45,11 @@ const checkUser = (req, res, next) => {
 app.get("/", (req, res) => {
   res.redirect("/home");
 });
+
 app.get("/loginDirect", (req, res) => {
   res.sendFile(path.join(__dirname, "views", "LoginDirect.html"));
+
+  // res.sendFile(path.join(__dirname, "views/Templets", "Chart.html"));
 });
 app.get("/home", (req, res) => {
   res.sendFile(path.join(__dirname, "views", "home.html"));

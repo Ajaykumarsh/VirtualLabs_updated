@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <title>Document</title>
+</head>
+<style>
+    .chartWrapper {
+        margin-left: 25%;
+        margin-top: 10%;
+        padding: 20px;
+        border-radius: 20px;
+
+    }
+
+    .chartWrapper>canvas {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    .chartAreaWrapper {
+        width: 600px;
+        overflow-x: scroll;
+    }
+</style>
+
+<body>
+    <div class="chartWrapper">
+        <div class="chartAreaWrapper">
+            <div class="chartAreaWrapper2">
+                <canvas id="mychart" height="300" width="750"></canvas>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    data = JSON.parse(sessionStorage.getItem('videoData'))
+    var s = sessionStorage.getItem('subject');
+    data = data[s];
+    labels=[]
+    values=[]
+    for (i in data){
+        labels.push(`Program${i}`)
+        values.push(data[`${i}`]['count'])
+    }
+
+    renderGraph(labels,values,s)
+
+    function renderGraph(labels,values,s) {
+        var ctx = document.getElementById('mychart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: s,
+                    data: values,
+                    borderWidth: 1,
+                    backgroundColor: 'rgba(0,0,0,0)',
+                    borderColor: 'blue',
+                }]
+            },
+            options: {
+                responsive: false,
+            }
+        });
+    }
+</script>
+
+</html>

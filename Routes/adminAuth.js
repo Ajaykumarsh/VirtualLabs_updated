@@ -43,7 +43,9 @@ router.get('/google/callback',bodyPar,cook,
         const admin=await admins.findById(req.user._json.email)
         if(admin)
         // res.send(`Welcome ${req.user.displayName}`);
-        res.sendFile(path.join(__dirname, "../views/Templets", "Results.html"));
+        // res.sendFile(path.join(__dirname, "../views/Templets", "Results.html"));
+        res.sendFile(path.join(__dirname, "../views/Templets", "Chart.html"));
+        
         else
         res.send("olaola")
     });

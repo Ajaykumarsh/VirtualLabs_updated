@@ -10,13 +10,6 @@
     <script src="js/jquery-3.4.1.min.js"></script>
     <link rel="stylesheet" href="/Semantic/semantic.min.css">
     <script src="/Semantic/semantic.min.js"></script>
-    <!-- <script src="js/StudentLogin.js"></script> -->
-    <!-- <script>
-           $( document ).ready(function() {
-        console.log( "document loaded" );
-        document.getElementsByClassName("use").innerHTML="uasjdljdasd";
-    });
-        </script> -->
     <script src="js/Userfetch.js"></script>
     <link rel="stylesheet" href="/home.css">
     <link rel="icon" href="images\dscelogo.png">
@@ -45,28 +38,7 @@
     </div>
     </div>
     <div class="ui container" id="CardGrid">
-        <div id="renderElements" class="ui stackable grid">
-           
-            <!-- <div class="four wide column">
-                <div class="ui raised card" id="car1">
-                    <div class="content" id="Card1">
-                        <div class="header">
-                            <a href="/cpl">
-                                Computer Programming Lab
-                            </a>
-                        </div>
-                    </div>
-                    <div class="content">
-                        <span class="CardBody">
-                            Contains lab programs
-                        </span>
-                        <br><br>
-                        <a class="ui button" href="/cpl">Go</a>
-                    </div>
-                </div>
-            </div> -->
-
-            
+        <div id="renderElements" class="ui stackable grid">            
         </div>
     </div>>
 </body>
@@ -76,9 +48,6 @@
   
     var s=sessionStorage.getItem('sem');
     data=data[s];
-    // console.log("s value",s)
-    // console.log(typeof(s))
-    // console.log("daga coming from ",data);
     function render(){
         var str=''
             for(i in data){
