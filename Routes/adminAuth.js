@@ -57,8 +57,7 @@ function checkAdmin(req,res,next){
     }
 }
 router.get("/google/logout",bodyPar,cook,(req,res)=>{
-    req.session=null;
-    req.logout();
+    req.sessionStore.sessions={}
     res.redirect('/loginDirect');
 });
 
