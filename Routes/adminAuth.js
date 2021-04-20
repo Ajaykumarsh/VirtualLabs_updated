@@ -44,13 +44,23 @@ router.get('/google/callback',bodyPar,cook,
         if(admin)
         // res.send(`Welcome ${req.user.displayName}`);
         // res.sendFile(path.join(__dirname, "../views/Templets", "Results.html"));
-        res.sendFile(path.join(__dirname, "../views/Templets", "Chart.html"));
+        //res.sendFile(path.join(__dirname, "../views/Templets", "Chart.html"));
+        // res.send(req.user)
+        res.redirect('/admin/page')
         
         else
         res.send("olaola")
     });
-
-
+router.get('/page',checkAdmin,(req,res)=>{
+    res.sendFile(path.join(__dirname, "../views/Templets", "Chart.html"));
+})
+function checkAdmin(req,res,next){
+    if(Object.keys(req.sessionStore.sessions).length){
+        next();
+    }else{
+        res.redirect('/loginDirect')
+    }
+}
 router.get("/google/logout",bodyPar,cook,(req,res)=>{
     req.session=null;
     req.logout();
