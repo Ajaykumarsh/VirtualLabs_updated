@@ -42,12 +42,7 @@ router.get('/google/callback',bodyPar,cook,
         // Successful authentication, redirect home.
         const admin=await admins.findById(req.user._json.email)
         if(admin)
-        // res.send(`Welcome ${req.user.displayName}`);
-        // res.sendFile(path.join(__dirname, "../views/Templets", "Results.html"));
-        //res.sendFile(path.join(__dirname, "../views/Templets", "Chart.html"));
-        // res.send(req.user)
         res.redirect('/admin/page')
-        
         else
         res.send("olaola")
     });
