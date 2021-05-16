@@ -6,6 +6,7 @@ const path = require("path");
 
 const studentRouter = require("./Routes/StudentAuth.js");
 const quiz_solution = require("./Routes/quiz_solution.js");
+const labsrouter = require("./Routes/likes.js");
 const adminRouter = require("./Routes/adminAuth.js");
 
 const compile = require("./public/js/compile.js");
@@ -33,6 +34,7 @@ app.use(
 app.use("/StudentAuthentication", studentRouter);
 app.use("/quiz", quiz_solution);
 app.use("/admin", adminRouter);
+app.use("/labs", labsrouter);
 
 const checkUser = (req, res, next) => {
   if (req.session.usn == undefined) {
@@ -92,9 +94,9 @@ app.get(
     res.sendFile(path.join(__dirname, "views/Templets", "subjectTemplet.html"));
   }
 );
-app.get("/lab", checkUser, (req, res) => {
-  res.sendFile(path.join(__dirname, "views/Templets", "labTemplet.html"));
-});
+// app.get("/lab", checkUser, (req, res) => {
+//   res.sendFile(path.join(__dirname, "views/Templets", "labTemplet.html"));
+// });
 
 app.get("/networkutilities", checkUser, (req, res) => {
   res.sendFile(path.join(__dirname, "views", "networkutilities.html"));

@@ -53,17 +53,27 @@
              
               <br /><br />
               <!-- https://www.youtube.com/embed/-udal7o_P-c?list=PLRAfX2aR2KAazEytznqLek1K1M93OzukK -->
-              <iframe id="video" width="100%" height="500" src="" frameborder="0"   allowfullscreen="allowfullscreen"></iframe>
-          
+              <!-- <iframe id="video" width="100%" height="500" src="" frameborder="0"   allowfullscreen="allowfullscreen"></iframe> -->
+              <video id="video" width="100%" height="500" controls="controls" autoplay="autoplay">
+                <source src="" type='video/webm' />
+  
               <br /><br /></div>
+
              <form action="/labs/lab" method="POST">
-              <button  class="like__btn" >
-                <span id="icon"><i class="far fa-thumbs-up"></i></span>
-                <span id="count">0</span> Like
+              <input id="sub" name="sub" style="display: none">
+              <input type="text" id="labno" name="labno" style="display: none">
+              <button type="submit" class="like__btn" >
+                <%if(arr[1]==false){%>
+                  <span id="icon"><i class="far fa-thumbs-up"></i></span>
+                <%}else{%>
+                  <span id="icon"><i class="fas fa-thumbs-up"></i></span>
+                <%}%>
+               
+                <span id="count" name="count"><%=arr[0]%></span> Like
               </button>
-              <input type="text" name="sub" id="subject">
-              <input type="text" name="labno" id="lab">
             </form>
+            
+ 
       
 
             <div id="pre" style="display: none">
@@ -74,17 +84,16 @@
         </div>
       </div>
     </div>
-<!-- <script src="/js/like.js"></script> -->
   </body>
   <script>
 
-document.getElementById('subject').innerHTML=s;
-        document.getElementById('lab').innerHTML=sessionStorage.getItem('Program');
+
       function render(){
+        document.getElementById("sub").value=sessionStorage.getItem("subject");
+        document.getElementById("labno").value=sessionStorage.getItem("Program");
+
         data = JSON.parse(sessionStorage.getItem('videoData'))
         var s = sessionStorage.getItem('subject');
-        document.getElementById('subject').innerHTML=s;
-        document.getElementById('lab').innerHTML=sessionStorage.getItem('Program');
         data = data[s];
         data=data[sessionStorage.getItem('Program')]
         console.log(data);

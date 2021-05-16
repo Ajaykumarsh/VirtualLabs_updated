@@ -23,7 +23,8 @@
     "newrelic": "^7.0.1",
     "passport": "^0.4.1",
     "passport-google-oauth20": "^2.0.0",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "sessionstorage": "^0.1.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.6"

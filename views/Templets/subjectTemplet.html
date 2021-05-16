@@ -76,7 +76,7 @@
     <script>
         data = JSON.parse(sessionStorage.getItem('subData'))
         var s = sessionStorage.getItem('subject');
-    
+        // document.getElementById("sub").value=sessionStorage.getItem('subject');
         data = data[s];
         document.getElementById('Title').innerHTML = s;
         document.getElementById('int').innerHTML = data.introduction;
@@ -89,18 +89,28 @@
                   <div class="content"><p class="transition hidden">${data.faqs[i].a}</p></div>`
         }
 
-        for (var j = 1; j <= data.lab; j++) {
-            st += `<a href="/lab" onclick='labLink("${j}")'><button class="ui button">Lab Program ${j}</button></a>
-                            <br />
-                            <br />
-                            <br />`
-        }
+    
+st+=`<form action="/labs/lab" method='get' >
+    <input  id="sub" type="text" placeholder="somesub" name="sub" style="display: none">
+    <input  id="lab" type="text" placeholder="somesub" name="lab" style="display: none">`
+    for (var j = 1; j <= data.lab; j++) {
+         st+=  ` <button type="submit" onclick='labLink("${j}")' class="ui button">Lab Program ${j}</button><br><br><br>`
+         
+    }
+       st+=   ` </form>`
+    
 
         document.getElementById('faqData').innerHTML = str;
         document.getElementById('labs').innerHTML = st;
         function labLink(i) {
             sessionStorage.setItem("Program", i);
+            document.getElementById("lab").value=i;
         }
+
+    
+        document.getElementById("sub").value=sessionStorage.getItem('subject');
+        // document.getElementById("lab").value=sessionStorage.getItem('Program');
+
     </script>
 </body>
 
